@@ -11,30 +11,26 @@
       "use": "@vercel/static"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/",
-      "dest": "/index.html"
+      "source": "/professional",
+      "destination": "/professional_legal_dashboard.html"
     },
     {
-      "src": "/professional",
-      "dest": "/professional_legal_dashboard.html"
+      "source": "/complete",
+      "destination": "/complete_22_segments_dashboard.html"
     },
     {
-      "src": "/complete",
-      "dest": "/complete_22_segments_dashboard.html"
+      "source": "/final-exact",
+      "destination": "/final_exact_timed_dashboard.html"
     },
     {
-      "src": "/final-exact",
-      "dest": "/final_exact_timed_dashboard.html"
+      "source": "/final-working",
+      "destination": "/final_working_audio_dashboard.html"
     },
     {
-      "src": "/final-working",
-      "dest": "/final_working_audio_dashboard.html"
-    },
-    {
-      "src": "/supreme-court",
-      "dest": "/supreme_court_opening.html"
+      "source": "/supreme-court",
+      "destination": "/supreme_court_opening.html"
     }
   ],
   "headers": [
