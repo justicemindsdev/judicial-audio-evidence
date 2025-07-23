@@ -1,16 +1,4 @@
 {
-  "version": 2,
-  "public": true,
-  "builds": [
-    {
-      "src": "*.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "audio_evidence_exact_timestamps/*.mp3",
-      "use": "@vercel/static"
-    }
-  ],
   "rewrites": [
     {
       "source": "/professional",
@@ -31,21 +19,6 @@
     {
       "source": "/supreme-court",
       "destination": "/supreme_court_opening.html"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600"
-        },
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
-        }
-      ]
     }
   ]
 }
