@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "ben-mak-court-analysis",
+  "public": true,
   "builds": [
     {
       "src": "*.html",
@@ -14,7 +14,7 @@
   "routes": [
     {
       "src": "/",
-      "dest": "/professional_legal_dashboard.html"
+      "dest": "/index.html"
     },
     {
       "src": "/professional",
@@ -35,6 +35,21 @@
     {
       "src": "/supreme-court",
       "dest": "/supreme_court_opening.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
     }
   ]
 }
