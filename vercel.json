@@ -7,22 +7,30 @@
       "use": "@vercel/static"
     },
     {
-      "src": "audio_segments/*.mp3",
+      "src": "audio_evidence_exact_timestamps/*.mp3",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/",
-      "dest": "/index.html"
+      "dest": "/professional_legal_dashboard.html"
     },
     {
-      "src": "/analysis",
-      "dest": "/court_errors_analysis.html"
+      "src": "/professional",
+      "dest": "/professional_legal_dashboard.html"
     },
     {
-      "src": "/gov-style",
-      "dest": "/govuk_court_analysis.html"
+      "src": "/complete",
+      "dest": "/complete_22_segments_dashboard.html"
+    },
+    {
+      "src": "/final-exact",
+      "dest": "/final_exact_timed_dashboard.html"
+    },
+    {
+      "src": "/final-working",
+      "dest": "/final_working_audio_dashboard.html"
     },
     {
       "src": "/supreme-court",
