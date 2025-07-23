@@ -37,3 +37,4 @@ __pycache__/
 !audio_segments/
 !vercel.json
 !README.md
+.vercel
