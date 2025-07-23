@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "name": "ben-mak-court-analysis",
+  "builds": [
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "audio_segments/*.mp3",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/analysis",
+      "dest": "/court_errors_analysis.html"
+    },
+    {
+      "src": "/gov-style",
+      "dest": "/govuk_court_analysis.html"
+    },
+    {
+      "src": "/supreme-court",
+      "dest": "/supreme_court_opening.html"
+    }
+  ]
+}

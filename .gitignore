@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+*.log
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Build
+.next/
+dist/
+out/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Temporary files
+*.tmp
+*.temp
+
+# Keep essential files for deployment
+!index.html
+!court_errors_analysis.html
+!govuk_court_analysis.html
+!supreme_court_opening.html
+!audio_segments/
+!vercel.json
+!README.md
