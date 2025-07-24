@@ -1,24 +1,40 @@
 {
-  "rewrites": [
+  "version": 2,
+  "name": "judicial-audio-evidence",
+  "builds": [
     {
-      "source": "/professional",
-      "destination": "/professional_legal_dashboard.html"
+      "src": "final_working_audio_dashboard.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/final_working_audio_dashboard.html"
     },
     {
-      "source": "/complete",
-      "destination": "/complete_22_segments_dashboard.html"
-    },
+      "src": "/(.*)",
+      "dest": "/final_working_audio_dashboard.html"
+    }
+  ],
+  "headers": [
     {
-      "source": "/final-exact",
-      "destination": "/final_exact_timed_dashboard.html"
-    },
-    {
-      "source": "/final-working",
-      "destination": "/final_working_audio_dashboard.html"
-    },
-    {
-      "source": "/supreme-court",
-      "destination": "/supreme_court_opening.html"
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
     }
   ]
 }
+EOF < /dev/null
