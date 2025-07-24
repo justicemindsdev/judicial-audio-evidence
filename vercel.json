@@ -3,7 +3,7 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/final_working_audio_dashboard.html"
+      "destination": "/index.html"
     }
   ],
   "headers": [
