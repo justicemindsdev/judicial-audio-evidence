@@ -6,11 +6,170 @@
     <title>Legal Audio Evidence Analysis - Liverpool Family Court</title>
     <link rel="stylesheet" href="https://www.gov.uk/assets/govuk-frontend/govuk-frontend-5.4.1.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+        
         @page { size: A4; margin: 15mm; }
         @media print { 
             body { margin: 0; font-size: 10pt; color: #000; } 
             .no-print { display: none; }
             .page-break { page-break-before: always; }
+        }
+
+        /* Landing Page Hero Animations */
+        .hero-container {
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #0b0c0c 0%, #1d70b8 100%);
+        }
+
+        .hero-image {
+            width: 120%;
+            height: 120%;
+            object-fit: cover;
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            opacity: 0;
+            animation: fadeInZoom 3s ease-out forwards;
+        }
+
+        @keyframes fadeInZoom {
+            0% {
+                opacity: 0;
+                transform: scale(1.2);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(11, 12, 12, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .typewriter-container {
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 1000px;
+            text-align: center;
+            opacity: 0;
+            animation: fadeInUp 2s ease-out 3s forwards;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateX(-50%) translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+
+        .typewriter-text {
+            font-family: 'Courier Prime', monospace;
+            font-size: 18px;
+            color: #ffffff;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            border-right: 2px solid #ffffff;
+            padding-right: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 0;
+            animation: typing 4s steps(200) 4s forwards, blink 1s infinite 4s;
+        }
+
+        @keyframes typing {
+            0% { width: 0; }
+            100% { width: 100%; }
+        }
+
+        @keyframes blink {
+            0%, 50% { border-color: #ffffff; }
+            51%, 100% { border-color: transparent; }
+        }
+
+        .enter-case-btn {
+            background: linear-gradient(45deg, #d4351c, #ff6b47);
+            color: white;
+            padding: 20px 40px;
+            font-size: 20px;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(212, 53, 28, 0.3);
+            opacity: 0;
+            animation: fadeInScale 1s ease-out 8s forwards;
+        }
+
+        @keyframes fadeInScale {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .enter-case-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(212, 53, 28, 0.4);
+            background: linear-gradient(45deg, #ff6b47, #d4351c);
+        }
+
+        .rarity-badge {
+            background: linear-gradient(45deg, #ffb000, #ffd700);
+            color: #0b0c0c;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-family: 'Courier Prime', monospace;
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: 20px;
+            display: inline-block;
+            opacity: 0;
+            animation: fadeInBounce 1s ease-out 9s forwards;
+        }
+
+        @keyframes fadeInBounce {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Hide main content initially */
+        .main-content {
+            display: none;
         }
         
         /* Professional spacing and typography */
@@ -228,23 +387,35 @@
 </head>
 <body class="govuk-template__body">
     
-    <header class="govuk-header" role="banner" data-module="govuk-header">
-        <div class="govuk-header__container govuk-width-container">
-            <div class="govuk-header__content">
-                <a href="#" class="govuk-header__link govuk-header__link--service-name">
-                    Legal Audio Evidence Analysis
-                </a>
+    <!-- Hero Landing Page -->
+    <div class="hero-container">
+        <img src="/images/hero_header_final.png" alt="Justice System" class="hero-image">
+        <div class="hero-overlay">
+            <div class="typewriter-container">
+                <div class="typewriter-text">
+                    A historic legal case revealing systematic due process violations in Liverpool Family Court. Expert determination by Master of Laws Ben Mak (93.9% JAC Framework - 1 in 20 billion statistical rarity) documents 22 procedural errors threatening child welfare and constitutional rights.
+                </div>
+                <div class="rarity-badge">CONSTITUTIONAL CRISIS • EXPERT DETERMINATION</div>
+                <br><br>
+                <a href="/professional_legal_dashboard.html" class="enter-case-btn">ENTER CASE EVIDENCE</a>
             </div>
         </div>
-    </header>
-
-    <!-- Hero Header Image -->
-    <div class="govuk-width-container" style="padding: 0;">
-        <img src="/images/hero_header_final.png" alt="Legal Audio Evidence Analysis Hero Header" style="width: 100%; height: auto; display: block;">
     </div>
 
-    <div class="govuk-width-container">
-        <main class="govuk-main-wrapper" id="main-content" role="main">
+    <!-- Main Content (Hidden Initially) -->
+    <div class="main-content">
+        <header class="govuk-header" role="banner" data-module="govuk-header">
+            <div class="govuk-header__container govuk-width-container">
+                <div class="govuk-header__content">
+                    <a href="#" class="govuk-header__link govuk-header__link--service-name">
+                        Legal Audio Evidence Analysis
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div class="govuk-width-container">
+            <main class="govuk-main-wrapper" id="main-content" role="main">
             
             <div class="govuk-grid-row">
                 <div class="govuk-grid-column-full">
@@ -348,6 +519,7 @@
                 </div>
             </div>
         </main>
+        </div>
     </div>
 
     <footer class="govuk-footer" role="contentinfo">
