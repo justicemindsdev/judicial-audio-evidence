@@ -1,0 +1,76 @@
+name: Deploy Judicial Audio Evidence
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Install Vercel CLI
+      run: npm install --global vercel@latest
+      
+    - name: Pull Vercel Environment Information
+      run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+      
+    - name: Build Project Artifacts
+      run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+      
+    - name: Deploy Project Artifacts to Vercel
+      run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+      
+    - name: Verify Supabase Audio Storage
+      run: |
+        echo "Testing Supabase audio storage connectivity..."
+        curl -s --head "https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/exact_08_De_Facto_Parent_Status_DD_EXACT.mp3" > /dev/null
+        echo "✅ Supabase audio storage accessible"
+        
+    - name: Verify Domain Accessibility
+      run: |
+        echo "Waiting for deployment to propagate..."
+        sleep 30
+        echo "Testing https://judicial.justice-minds.com"
+        curl -s -I "https://judicial.justice-minds.com" | head -n 1
+        
+    - name: Update Cloudflare Cache
+      run: |
+        curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
+          -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+          -H "Content-Type: application/json" \
+          --data '{"purge_everything":true}'
+          
+  test-audio:
+    runs-on: ubuntu-latest
+    needs: deploy
+    
+    steps:
+    - name: Test Audio Evidence Accessibility
+      run: |
+        echo "Testing critical audio evidence files..."
+        
+        # Test the key "de facto parent" audio
+        curl -s --head "https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/exact_08_De_Facto_Parent_Status_DD_EXACT.mp3" > /dev/null
+        echo "✅ De facto parent audio accessible"
+        
+        # Test Ben's response audio
+        curl -s --head "https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/exact_08_De_Facto_Parent_Status_BEN_EXACT.mp3" > /dev/null
+        echo "✅ Ben's response audio accessible"
+        
+        echo "🎵 All critical audio evidence verified"

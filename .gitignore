@@ -1,40 +1,55 @@
-# Dependencies
-node_modules/
-*.log
+# Justice Minds - Judicial Audio Evidence
+# Environment and sensitive files
 
-# Environment
+# Environment variables
 .env
 .env.local
 .env.production
+.env.staging
 
-# Build
-.next/
-dist/
-out/
+# Vercel
+.vercel
+.vercel.json
+
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Operating System  
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
 # IDE
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
 
-# OS
-.DS_Store
-Thumbs.db
-
-# Python
-__pycache__/
-*.pyc
-*.pyo
+# Logs
+logs
+*.log
 
 # Temporary files
 *.tmp
 *.temp
+temp/
+tmp/
 
-# Keep essential files for deployment
-!index.html
-!court_errors_analysis.html
-!govuk_court_analysis.html
-!supreme_court_opening.html
-!audio_segments/
-!vercel.json
-!README.md
-.vercel
+# Cache
+.cache/
+.npm/
+.yarn/
+
+# But keep the deployment script and audio evidence
+\!deploy.sh
+\!final_working_audio_dashboard.html
+\!*.pdf
+EOF < /dev/null
