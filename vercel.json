@@ -1,20 +1,8 @@
 {
-  "version": 2,
-  "name": "judicial-audio-evidence",
-  "builds": [
+  "rewrites": [
     {
-      "src": "final_working_audio_dashboard.html",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/",
-      "dest": "/final_working_audio_dashboard.html"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/final_working_audio_dashboard.html"
+      "source": "/",
+      "destination": "/final_working_audio_dashboard.html"
     }
   ],
   "headers": [
@@ -37,4 +25,3 @@
     }
   ]
 }
-EOF < /dev/null
