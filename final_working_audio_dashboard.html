@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>COMPLETE 22 SEGMENTS - Working Audio Evidence Dashboard</title>
     <style>
         @page { size: A4; margin: 15mm; }
@@ -755,6 +758,12 @@
 
     <script>
         // Enhanced mobile-compatible audio controls with volume normalization
+        // Clear any potential undefined references
+        if (typeof initAll !== 'undefined') {
+            console.warn('initAll function detected - clearing to prevent conflicts');
+            initAll = undefined;
+        }
+        
         document.addEventListener('DOMContentLoaded', function() {
             const audioElements = document.querySelectorAll('audio');
             
@@ -799,6 +808,23 @@
         // Add site reference for judicial.justice-minds.com API
         console.log('Judicial Evidence Dashboard - judicial.justice-minds.com');
         console.log('Cloudflare Zone: c8d704d3b0bb39ecb516c187b021ad9b');
+        
+        // Global error handler to catch any undefined references
+        window.addEventListener('error', function(e) {
+            if (e.message.includes('initAll') || e.message.includes('professional_legal_dashboard')) {
+                console.warn('Caught external script error:', e.message);
+                e.preventDefault();
+                return false;
+            }
+        });
+        
+        // Prevent any external script conflicts
+        window.addEventListener('beforeunload', function() {
+            // Clear any external references
+            if (typeof initAll !== 'undefined') {
+                initAll = undefined;
+            }
+        });
     </script>
 </body>
 </html>
