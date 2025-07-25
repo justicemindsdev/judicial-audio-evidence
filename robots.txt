@@ -1,0 +1,48 @@
+User-agent: *
+Allow: /
+Allow: /professional_legal_dashboard.html
+Allow: /index.html
+Allow: /final_working_audio_dashboard.html
+
+# Search Engine Optimization
+Sitemap: https://judicial.justice-minds.com/sitemap.xml
+
+# Allow all major search engines and AI crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Crawl delay for politeness
+Crawl-delay: 1
+
+# Important pages for indexing
+# Main legal dashboard
+# /professional_legal_dashboard.html - Primary legal analysis page
+# /index.html - Landing page
+# /final_working_audio_dashboard.html - Audio evidence page
