@@ -101,6 +101,42 @@
             color: white;
             text-decoration: none;
         }
+
+        /* Professional Logo Strip */
+        .logo-strip {
+            background: linear-gradient(90deg, #ffffff, #f8f9fa);
+            padding: 15px 0;
+            border-bottom: 2px solid #1d70b8;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo-item {
+            height: 40px;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+            margin: 5px;
+        }
+
+        .logo-item:hover {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .logo-item img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
         
         /* Professional spacing and typography */
         .segment-card { 
@@ -356,12 +392,33 @@
         </div>
     </header>
 
-    <!-- Corporate Hero Header -->
-    <div class="corporate-hero">
-        <img src="/images/hero_header_final.png" alt="Justice System">
-        <div class="corporate-overlay">
-            <div class="corporate-title">EXPERT LEGAL DETERMINATION</div>
-            <div class="corporate-subtitle">Liverpool Family Court • 22 Procedural Violations • Constitutional Analysis</div>
+    <!-- Professional Logo Strip -->
+    <div class="logo-strip">
+        <div class="logo-container">
+            <div class="logo-item">
+                <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/logos/university_of_law.svg" alt="University of Law">
+            </div>
+            <div class="logo-item">
+                <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/logos/nspcc.svg" alt="NSPCC">
+            </div>
+            <div class="logo-item">
+                <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/logos/city_of_liverpool_college.svg" alt="City of Liverpool College">
+            </div>
+            <div class="logo-item">
+                <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/logos/liverpool_city_council.svg" alt="Liverpool City Council">
+            </div>
+            <div class="logo-item">
+                <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/logos/city_of_westminster.svg" alt="City of Westminster">
+            </div>
+            <div class="logo-item">
+                <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/logos/liverpool_echo.png" alt="Liverpool Echo">
+            </div>
+            <div class="logo-item">
+                <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/logos/scie.svg" alt="SCIE">
+            </div>
+            <div class="logo-item">
+                <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/logos/house_of_commons.svg" alt="House of Commons">
+            </div>
         </div>
     </div>
 
