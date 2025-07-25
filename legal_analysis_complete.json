@@ -420,6 +420,18 @@
   },
 
   "template_components": {
+    "header_design_reference": {
+      "note": "Use provided header image as design reference",
+      "branding": "Justice Minds professional legal branding",
+      "logo_placement": "Top left with company credentials",
+      "navigation": "Professional legal dashboard navigation"
+    },
+    "footer_design_reference": {
+      "note": "Use provided footer image as design reference", 
+      "legal_disclaimers": "Constitutional Reform Act 2005 authority",
+      "contact_information": "Justice Minds company details",
+      "professional_credentials": "Ben Mak qualifications and certifications"
+    },
     "header_standard": {
       "title": "{{segment.title}}",
       "timing": "{{segment.timing.ben_mak}} | {{segment.timing.dd_judge}}",

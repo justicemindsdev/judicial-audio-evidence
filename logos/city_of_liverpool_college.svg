@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="csrf-token" content="FrZ6erJprTpgnK00R3vtI78oJyC8NwjTHCRf1eWF">
+    <link rel="preload" as="style" href="https://liv-coll.ac.uk/build/assets/app-020510b4.css" /><link rel="stylesheet" href="https://liv-coll.ac.uk/build/assets/app-020510b4.css" data-navigate-track="reload" />    <!-- Livewire Styles --><style >[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}</style>
+</head>
+<body>
+<div wire:snapshot="{&quot;data&quot;:[],&quot;memo&quot;:{&quot;id&quot;:&quot;8MK606y3rXXuy3tv3Ud6&quot;,&quot;name&quot;:&quot;global.mobile-header&quot;,&quot;path&quot;:&quot;wp-content\/themes\/livcoll\/images\/logo.svg&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;384b70608a9ab0eeab4f2ffe2e2e9fd7bb0e30b03c8a503cc7b2843fe8335276&quot;}" wire:effects="[]" wire:id="8MK606y3rXXuy3tv3Ud6" x-data="{ openMenu: false }">
+    <header id="mobile-header" class="py-2 fixed top-0 w-full z-50 bg-white lg:hidden" role="banner">
+        <div class="container relative">
+            <div class="flex items-center justify-between py-4">
+                <div>
+                    <a href="/" title="Go to homepage" aria-label="Go to homepage" class="block w-[136px]">
+                        <img data-src="/skin/logo.svg" alt="log" class="lazyload w-full">
+                    </a>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <a href="/site-search" title="Site Search" aria-label="Site Search" class="active:outline-0 focus:outline-0 button bg-brand-purple-100 relative z-50 rounded-full size-[50px] text-white flex justify-center items-center">
+                        <i class="fa-solid fa-search text-base"></i>
+                    </a>
+
+                    <button @click="openMenu = !openMenu" class="active:outline-0 relative z-50 focus:outline-0 rounded-full size-[50px] bg-brand-pink-100 text-white flex justify-center items-center">
+                        <i :class="{ 'fa-close': openMenu }" class="fa-solid fa-bars text-base"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div x-show="openMenu" id="mobile-nav" class="fixed top-20 z-50 bg-[#F0F0F0] w-full h-screen px-0 p-4 overflow-scroll no-scrollbar">
+        <div>
+    <nav role="navigation">
+        <ul id="main-nav">
+            <a href="https://colc.sharepoint.com/sites/MyHub" title="Student Hub" aria-label="Student Hub" target="_blank" class="block lg:hidden py-4 active:outline-0 mb-4 mx-4 text-center focus:outline-0 bg-white button shadow-brand-green-100 relative z-50 text-black flex gap-2 justify-center items-center hover:bg-[#DBDBDB] !hover:shadow-tag transition ease-in-out">
+                <span>Student Hub</span>
+            </a>
+
+            <a href="https://colc.sharepoint.com" title="Staff Hub" aria-label="Staff Hub" target="_blank" class="block lg:hidden active:outline-0 py-4 mx-4 text-center focus:outline-0 bg-white button shadow-brand-orange-100 relative z-50 text-black flex gap-2 justify-center items-center hover:bg-[#DBDBDB] !hover:shadow-tag transition ease-in-out">
+                <span>Staff Hub</span>
+            </a>
+
+            <!--[if BLOCK]><![endif]-->                <li x-data="{ expanded: false }" class="group relative bg-[#F0F0F0]">
+                    <div class="flex items-center w-full justify-between px-4 lg:px-8 py-4">
+                        <a class="w-full text-lg lg:text-[20px] text-black transition focus:font-bold hover:text-brand-pink-100" accesskey="0" href="/study" title="Study" aria-label="Study" wire:navigate>
+                            Study
+                        </a>
+
+                        <!--[if BLOCK]><![endif]-->                            <span @click="expanded = !expanded" class="w-full text-right cursor-pointer"><i x-show="expanded" class="fa-solid fa-chevron-up font-light text-base lg:text-lg"></i> <i x-show="!expanded" class="fa-solid fa-chevron-down font-light text-base lg:text-lg"></i></span>
+                        <!--[if ENDBLOCK]><![endif]-->
+                    </div>
+
+                    <!--[if BLOCK]><![endif]-->                        <div x-show="expanded" class="w-full bg-white px-4 lg:px-8 py-2 lg:py-4">
+                            <div>
+    <ul class="children w-full bg-white">
+        <!--[if BLOCK]><![endif]-->            <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/study/view-all-courses" title="View all Courses" aria-label="View all Courses" wire:navigate>
+                        View all Courses
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/study/16-18-at-college" title="16-18 at College" aria-label="16-18 at College" wire:navigate>
+                        16-18 at College
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/study/apprenticeships" title="Apprenticeships" aria-label="Apprenticeships" wire:navigate>
+                        Apprenticeships
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/study/adults" title="Adults" aria-label="Adults" wire:navigate>
+                        Adults
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/study/university-centre" title="University Centre" aria-label="University Centre" wire:navigate>
+                        University Centre
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+        <!--[if ENDBLOCK]><![endif]-->
+    </ul>
+</div>                        </div>
+                    <!--[if ENDBLOCK]><![endif]-->
+                </li>
+                            <li x-data="{ expanded: false }" class="group relative bg-[#F0F0F0]">
+                    <div class="flex items-center w-full justify-between px-4 lg:px-8 py-4">
+                        <a class="w-full text-lg lg:text-[20px] text-black transition focus:font-bold hover:text-brand-pink-100" accesskey="1" href="/course-areas" title="Course Areas" aria-label="Course Areas" wire:navigate>
+                            Course Areas
+                        </a>
+
+                        <!--[if BLOCK]><![endif]-->                            <span @click="expanded = !expanded" class="w-full text-right cursor-pointer"><i x-show="expanded" class="fa-solid fa-chevron-up font-light text-base lg:text-lg"></i> <i x-show="!expanded" class="fa-solid fa-chevron-down font-light text-base lg:text-lg"></i></span>
+                        <!--[if ENDBLOCK]><![endif]-->
+                    </div>
+
+                    <!--[if BLOCK]><![endif]-->                        <div x-show="expanded" class="w-full bg-white px-4 lg:px-8 py-2 lg:py-4">
+                            <div>
+    <ul class="children w-full bg-white">
+        <!--[if BLOCK]><![endif]-->            <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/course-areas/access-to-he" title="Access to HE" aria-label="Access to HE" wire:navigate>
+                        Access to HE
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/course-areas/arts-media-academy" title="Expressive Arts &amp; Media Academy" aria-label="Expressive Arts &amp; Media Academy" wire:navigate>
+                        Expressive Arts &amp; Media Academy
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/course-areas/catering-hospitality" title="Catering &amp; Hospitality" aria-label="Catering &amp; Hospitality" wire:navigate>
+                        Catering &amp; Hospitality
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/course-areas/creative-arts-fashion" title="Creative Arts &amp; Fashion" aria-label="Creative Arts &amp; Fashion" wire:navigate>
+                        Creative Arts &amp; Fashion
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/course-areas/construction-building" title="Construction &amp; Building" aria-label="Construction &amp; Building" wire:navigate>
+                        Construction &amp; Building
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/course-areas/digital-digital-academy" title="Digital (Digital Academy)" aria-label="Digital (Digital Academy)" wire:navigate>
+                        Digital (Digital Academy)
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/course-areas/engineering-logistics" title="Engineering &amp; Logistics" aria-label="Engineering &amp; Logistics" wire:navigate>
+                        Engineering &amp; Logistics
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/course-areas/esol" title="ESOL" aria-label="ESOL" wire:navigate>
+                        ESOL
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/course-areas/hair-beauty" title="Hair &amp; Beauty" aria-label="Hair &amp; Beauty" wire:navigate>
+                        Hair &amp; Beauty
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/course-areas/health-and-social-care" title="Health &amp; Social Care" aria-label="Health &amp; Social Care" wire:navigate>
+                        Health &amp; Social Care
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/course-areas/sport-public-services" title="Sport &amp; Public Services" aria-label="Sport &amp; Public Services" wire:navigate>
+                        Sport &amp; Public Services
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/course-areas/travel-tourism" title="Travel &amp; Tourism" aria-label="Travel &amp; Tourism" wire:navigate>
+                        Travel &amp; Tourism
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/course-areas/teacher-training" title="Teacher Training" aria-label="Teacher Training" wire:navigate>
+                        Teacher Training
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+        <!--[if ENDBLOCK]><![endif]-->
+    </ul>
+</div>                        </div>
+                    <!--[if ENDBLOCK]><![endif]-->
+                </li>
+                            <li x-data="{ expanded: false }" class="group relative bg-[#F0F0F0]">
+                    <div class="flex items-center w-full justify-between px-4 lg:px-8 py-4">
+                        <a class="w-full text-lg lg:text-[20px] text-black transition focus:font-bold hover:text-brand-pink-100" accesskey="2" href="/support-at-college" title="Support at College" aria-label="Support at College" wire:navigate>
+                            Support at College
+                        </a>
+
+                        <!--[if BLOCK]><![endif]-->                            <span @click="expanded = !expanded" class="w-full text-right cursor-pointer"><i x-show="expanded" class="fa-solid fa-chevron-up font-light text-base lg:text-lg"></i> <i x-show="!expanded" class="fa-solid fa-chevron-down font-light text-base lg:text-lg"></i></span>
+                        <!--[if ENDBLOCK]><![endif]-->
+                    </div>
+
+                    <!--[if BLOCK]><![endif]-->                        <div x-show="expanded" class="w-full bg-white px-4 lg:px-8 py-2 lg:py-4">
+                            <div>
+    <ul class="children w-full bg-white">
+        <!--[if BLOCK]><![endif]-->            <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/support-at-college/enrolment-application" title="Application &amp; Enrolment" aria-label="Application &amp; Enrolment" wire:navigate>
+                        Application &amp; Enrolment
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/support-at-college/careers-advice-and-guidance" title="Careers Advice &amp; Guidance" aria-label="Careers Advice &amp; Guidance" wire:navigate>
+                        Careers Advice &amp; Guidance
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/support-at-college/childcare-nursery" title="Childcare and Nursery" aria-label="Childcare and Nursery" wire:navigate>
+                        Childcare and Nursery
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/support-at-college/exam-access-arrangements" title="Exam Access Arrangements" aria-label="Exam Access Arrangements" wire:navigate>
+                        Exam Access Arrangements
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/support-at-college/financial-support" title="Financial Support" aria-label="Financial Support" wire:navigate>
+                        Financial Support
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/support-at-college/how-to-cope-with-exam-stress" title="How to Cope with Exam Stress" aria-label="How to Cope with Exam Stress" wire:navigate>
+                        How to Cope with Exam Stress
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/support-at-college/learning-support" title="Learning Support" aria-label="Learning Support" wire:navigate>
+                        Learning Support
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/support-at-college/resources-parents-carers" title="Resources (Parents &amp; Carers)" aria-label="Resources (Parents &amp; Carers)" wire:navigate>
+                        Resources (Parents &amp; Carers)
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/support-at-college/safeguarding" title="Safeguarding" aria-label="Safeguarding" wire:navigate>
+                        Safeguarding
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/support-at-college/wellbeing" title="Wellbeing" aria-label="Wellbeing" wire:navigate>
+                        Wellbeing
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+        <!--[if ENDBLOCK]><![endif]-->
+    </ul>
+</div>                        </div>
+                    <!--[if ENDBLOCK]><![endif]-->
+                </li>
+                            <li x-data="{ expanded: false }" class="group relative bg-[#F0F0F0]">
+                    <div class="flex items-center w-full justify-between px-4 lg:px-8 py-4">
+                        <a class="w-full text-lg lg:text-[20px] text-black transition focus:font-bold hover:text-brand-pink-100" accesskey="3" href="/college-life" title="College Life" aria-label="College Life" wire:navigate>
+                            College Life
+                        </a>
+
+                        <!--[if BLOCK]><![endif]-->                            <span @click="expanded = !expanded" class="w-full text-right cursor-pointer"><i x-show="expanded" class="fa-solid fa-chevron-up font-light text-base lg:text-lg"></i> <i x-show="!expanded" class="fa-solid fa-chevron-down font-light text-base lg:text-lg"></i></span>
+                        <!--[if ENDBLOCK]><![endif]-->
+                    </div>
+
+                    <!--[if BLOCK]><![endif]-->                        <div x-show="expanded" class="w-full bg-white px-4 lg:px-8 py-2 lg:py-4">
+                            <div>
+    <ul class="children w-full bg-white">
+        <!--[if BLOCK]><![endif]-->            <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/college-life/alumni" title="Alumni" aria-label="Alumni" wire:navigate>
+                        Alumni
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/college-life/exam-results" title="Exam Results" aria-label="Exam Results" wire:navigate>
+                        Exam Results
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/college-life/news" title="News" aria-label="News" wire:navigate>
+                        News
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/college-life/open-days-events" title="Open Days &amp; Events" aria-label="Open Days &amp; Events" wire:navigate>
+                        Open Days &amp; Events
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/college-life/our-campuses" title="Our Campuses" aria-label="Our Campuses" wire:navigate>
+                        Our Campuses
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/college-life/students-union" title="Students&#039; Union" aria-label="Students&#039; Union" wire:navigate>
+                        Students&#039; Union
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/college-life/term-dates-calendar" title="Term Dates &amp; Calendar" aria-label="Term Dates &amp; Calendar" wire:navigate>
+                        Term Dates &amp; Calendar
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/college-life/travel-to-college-bus-routes" title="Travel to College / Bus Routes" aria-label="Travel to College / Bus Routes" wire:navigate>
+                        Travel to College / Bus Routes
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/college-life/why-choose-us" title="Why Choose Us" aria-label="Why Choose Us" wire:navigate>
+                        Why Choose Us
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/college-life/work-experience" title="Work Experience" aria-label="Work Experience" wire:navigate>
+                        Work Experience
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+        <!--[if ENDBLOCK]><![endif]-->
+    </ul>
+</div>                        </div>
+                    <!--[if ENDBLOCK]><![endif]-->
+                </li>
+                            <li x-data="{ expanded: false }" class="group relative bg-[#F0F0F0]">
+                    <div class="flex items-center w-full justify-between px-4 lg:px-8 py-4">
+                        <a class="w-full text-lg lg:text-[20px] text-black transition focus:font-bold hover:text-brand-pink-100" accesskey="4" href="/public-facilities" title="Public Facilities" aria-label="Public Facilities" wire:navigate>
+                            Public Facilities
+                        </a>
+
+                        <!--[if BLOCK]><![endif]-->                            <span @click="expanded = !expanded" class="w-full text-right cursor-pointer"><i x-show="expanded" class="fa-solid fa-chevron-up font-light text-base lg:text-lg"></i> <i x-show="!expanded" class="fa-solid fa-chevron-down font-light text-base lg:text-lg"></i></span>
+                        <!--[if ENDBLOCK]><![endif]-->
+                    </div>
+
+                    <!--[if BLOCK]><![endif]-->                        <div x-show="expanded" class="w-full bg-white px-4 lg:px-8 py-2 lg:py-4">
+                            <div>
+    <ul class="children w-full bg-white">
+        <!--[if BLOCK]><![endif]-->            <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/public-facilities/the-academy-restaurant" title="The Academy Restaurant" aria-label="The Academy Restaurant" wire:navigate>
+                        The Academy Restaurant
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/public-facilities/the-academy-salon" title="The Academy Salon" aria-label="The Academy Salon" wire:navigate>
+                        The Academy Salon
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+        <!--[if ENDBLOCK]><![endif]-->
+    </ul>
+</div>                        </div>
+                    <!--[if ENDBLOCK]><![endif]-->
+                </li>
+                            <li x-data="{ expanded: false }" class="group relative bg-[#F0F0F0]">
+                    <div class="flex items-center w-full justify-between px-4 lg:px-8 py-4">
+                        <a class="w-full text-lg lg:text-[20px] text-black transition focus:font-bold hover:text-brand-pink-100" accesskey="5" href="/about-us" title="About Us" aria-label="About Us" wire:navigate>
+                            About Us
+                        </a>
+
+                        <!--[if BLOCK]><![endif]-->                            <span @click="expanded = !expanded" class="w-full text-right cursor-pointer"><i x-show="expanded" class="fa-solid fa-chevron-up font-light text-base lg:text-lg"></i> <i x-show="!expanded" class="fa-solid fa-chevron-down font-light text-base lg:text-lg"></i></span>
+                        <!--[if ENDBLOCK]><![endif]-->
+                    </div>
+
+                    <!--[if BLOCK]><![endif]-->                        <div x-show="expanded" class="w-full bg-white px-4 lg:px-8 py-2 lg:py-4">
+                            <div>
+    <ul class="children w-full bg-white">
+        <!--[if BLOCK]><![endif]-->            <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/about-us/college-of-sanctuary" title="College of Sanctuary" aria-label="College of Sanctuary" wire:navigate>
+                        College of Sanctuary
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/about-us/contact-us" title="Contact Us" aria-label="Contact Us" wire:navigate>
+                        Contact Us
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/about-us/edi" title="EDI" aria-label="EDI" wire:navigate>
+                        EDI
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/about-us/feedback-complaints" title="Feedback &amp; Complaints" aria-label="Feedback &amp; Complaints" wire:navigate>
+                        Feedback &amp; Complaints
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/about-us/governance" title="Governance" aria-label="Governance" wire:navigate>
+                        Governance
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/about-us/leadership-team" title="Leadership Team" aria-label="Leadership Team" wire:navigate>
+                        Leadership Team
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/about-us/ofsted-report" title="Ofsted Report" aria-label="Ofsted Report" wire:navigate>
+                        Ofsted Report
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/about-us/policies-and-procedures" title="Policies &amp; Procedures" aria-label="Policies &amp; Procedures" wire:navigate>
+                        Policies &amp; Procedures
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/about-us/reports" title="Reports" aria-label="Reports" wire:navigate>
+                        Reports
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/about-us/schools" title="Schools" aria-label="Schools" wire:navigate>
+                        Schools
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/about-us/work-for-us" title="Work for us" aria-label="Work for us" wire:navigate>
+                        Work for us
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+        <!--[if ENDBLOCK]><![endif]-->
+    </ul>
+</div>                        </div>
+                    <!--[if ENDBLOCK]><![endif]-->
+                </li>
+                            <li x-data="{ expanded: false }" class="group relative bg-[#F0F0F0]">
+                    <div class="flex items-center w-full justify-between px-4 lg:px-8 py-4">
+                        <a class="w-full text-lg lg:text-[20px] text-black transition focus:font-bold hover:text-brand-pink-100" accesskey="6" href="/employers" title="Employers" aria-label="Employers" wire:navigate>
+                            Employers
+                        </a>
+
+                        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+                    </div>
+
+                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+        </ul>
+    </nav>
+</div>
+
+
+
+
+
+    </div>
+</div><div x-data="{ openMenu: false }">
+    <header id="site-header" class="hidden md:flex" role="banner">
+        <div class="container relative">
+            <div class="flex items-center justify-between py-4">
+                <div>
+                    <a href="/" title="Go to homepage" aria-label="Go to homepage" class="block w-[209px]" wire:navigate>
+                        <img data-src="/skin/logo.svg" alt="logo" width="209" height="80" class="lazyload w-full">
+                    </a>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <a wire:navigate href="/site-search" title="Site Search" aria-label="Site Search" class="active:outline-0 focus:outline-0 button bg-brand-purple-100 relative z-50 text-white flex gap-2 items-center">
+                        <i class="fa-solid fa-search text-lg"></i> <span>Search</span>
+                    </a>
+
+                    <button @click="openMenu = !openMenu" class="active:outline-0 relative z-50 focus:outline-0 button bg-brand-pink-100 text-white flex gap-2 items-center">
+                        <i :class="{ 'fa-close': openMenu }" class="fa-solid fa-bars text-lg"></i> <span>Menu</span>
+                    </button>
+                </div>
+            </div>
+            <div x-show="openMenu" class="absolute !top-0 !right-0 z-30 w-[500px] h-screen py-[110px] bg-[#F0F0F0] overflow-scroll no-scrollbar">
+                <div>
+    <nav role="navigation">
+        <ul id="main-nav">
+            <a href="https://colc.sharepoint.com/sites/MyHub" title="Student Hub" aria-label="Student Hub" target="_blank" class="block lg:hidden py-4 active:outline-0 mb-4 mx-4 text-center focus:outline-0 bg-white button shadow-brand-green-100 relative z-50 text-black flex gap-2 justify-center items-center hover:bg-[#DBDBDB] !hover:shadow-tag transition ease-in-out">
+                <span>Student Hub</span>
+            </a>
+
+            <a href="https://colc.sharepoint.com" title="Staff Hub" aria-label="Staff Hub" target="_blank" class="block lg:hidden active:outline-0 py-4 mx-4 text-center focus:outline-0 bg-white button shadow-brand-orange-100 relative z-50 text-black flex gap-2 justify-center items-center hover:bg-[#DBDBDB] !hover:shadow-tag transition ease-in-out">
+                <span>Staff Hub</span>
+            </a>
+
+            <!--[if BLOCK]><![endif]-->                <li x-data="{ expanded: false }" class="group relative bg-[#F0F0F0]">
+                    <div class="flex items-center w-full justify-between px-4 lg:px-8 py-4">
+                        <a class="w-full text-lg lg:text-[20px] text-black transition focus:font-bold hover:text-brand-pink-100" accesskey="0" href="/study" title="Study" aria-label="Study" wire:navigate>
+                            Study
+                        </a>
+
+                        <!--[if BLOCK]><![endif]-->                            <span @click="expanded = !expanded" class="w-full text-right cursor-pointer"><i x-show="expanded" class="fa-solid fa-chevron-up font-light text-base lg:text-lg"></i> <i x-show="!expanded" class="fa-solid fa-chevron-down font-light text-base lg:text-lg"></i></span>
+                        <!--[if ENDBLOCK]><![endif]-->
+                    </div>
+
+                    <!--[if BLOCK]><![endif]-->                        <div x-show="expanded" class="w-full bg-white px-4 lg:px-8 py-2 lg:py-4">
+                            <div>
+    <ul class="children w-full bg-white">
+        <!--[if BLOCK]><![endif]-->            <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/study/view-all-courses" title="View all Courses" aria-label="View all Courses" wire:navigate>
+                        View all Courses
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/study/16-18-at-college" title="16-18 at College" aria-label="16-18 at College" wire:navigate>
+                        16-18 at College
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/study/apprenticeships" title="Apprenticeships" aria-label="Apprenticeships" wire:navigate>
+                        Apprenticeships
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/study/adults" title="Adults" aria-label="Adults" wire:navigate>
+                        Adults
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/study/university-centre" title="University Centre" aria-label="University Centre" wire:navigate>
+                        University Centre
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+        <!--[if ENDBLOCK]><![endif]-->
+    </ul>
+</div>                        </div>
+                    <!--[if ENDBLOCK]><![endif]-->
+                </li>
+                            <li x-data="{ expanded: false }" class="group relative bg-[#F0F0F0]">
+                    <div class="flex items-center w-full justify-between px-4 lg:px-8 py-4">
+                        <a class="w-full text-lg lg:text-[20px] text-black transition focus:font-bold hover:text-brand-pink-100" accesskey="1" href="/course-areas" title="Course Areas" aria-label="Course Areas" wire:navigate>
+                            Course Areas
+                        </a>
+
+                        <!--[if BLOCK]><![endif]-->                            <span @click="expanded = !expanded" class="w-full text-right cursor-pointer"><i x-show="expanded" class="fa-solid fa-chevron-up font-light text-base lg:text-lg"></i> <i x-show="!expanded" class="fa-solid fa-chevron-down font-light text-base lg:text-lg"></i></span>
+                        <!--[if ENDBLOCK]><![endif]-->
+                    </div>
+
+                    <!--[if BLOCK]><![endif]-->                        <div x-show="expanded" class="w-full bg-white px-4 lg:px-8 py-2 lg:py-4">
+                            <div>
+    <ul class="children w-full bg-white">
+        <!--[if BLOCK]><![endif]-->            <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/course-areas/access-to-he" title="Access to HE" aria-label="Access to HE" wire:navigate>
+                        Access to HE
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/course-areas/arts-media-academy" title="Expressive Arts &amp; Media Academy" aria-label="Expressive Arts &amp; Media Academy" wire:navigate>
+                        Expressive Arts &amp; Media Academy
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/course-areas/catering-hospitality" title="Catering &amp; Hospitality" aria-label="Catering &amp; Hospitality" wire:navigate>
+                        Catering &amp; Hospitality
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/course-areas/creative-arts-fashion" title="Creative Arts &amp; Fashion" aria-label="Creative Arts &amp; Fashion" wire:navigate>
+                        Creative Arts &amp; Fashion
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/course-areas/construction-building" title="Construction &amp; Building" aria-label="Construction &amp; Building" wire:navigate>
+                        Construction &amp; Building
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/course-areas/digital-digital-academy" title="Digital (Digital Academy)" aria-label="Digital (Digital Academy)" wire:navigate>
+                        Digital (Digital Academy)
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/course-areas/engineering-logistics" title="Engineering &amp; Logistics" aria-label="Engineering &amp; Logistics" wire:navigate>
+                        Engineering &amp; Logistics
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/course-areas/esol" title="ESOL" aria-label="ESOL" wire:navigate>
+                        ESOL
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/course-areas/hair-beauty" title="Hair &amp; Beauty" aria-label="Hair &amp; Beauty" wire:navigate>
+                        Hair &amp; Beauty
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/course-areas/health-and-social-care" title="Health &amp; Social Care" aria-label="Health &amp; Social Care" wire:navigate>
+                        Health &amp; Social Care
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/course-areas/sport-public-services" title="Sport &amp; Public Services" aria-label="Sport &amp; Public Services" wire:navigate>
+                        Sport &amp; Public Services
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/course-areas/travel-tourism" title="Travel &amp; Tourism" aria-label="Travel &amp; Tourism" wire:navigate>
+                        Travel &amp; Tourism
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/course-areas/teacher-training" title="Teacher Training" aria-label="Teacher Training" wire:navigate>
+                        Teacher Training
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+        <!--[if ENDBLOCK]><![endif]-->
+    </ul>
+</div>                        </div>
+                    <!--[if ENDBLOCK]><![endif]-->
+                </li>
+                            <li x-data="{ expanded: false }" class="group relative bg-[#F0F0F0]">
+                    <div class="flex items-center w-full justify-between px-4 lg:px-8 py-4">
+                        <a class="w-full text-lg lg:text-[20px] text-black transition focus:font-bold hover:text-brand-pink-100" accesskey="2" href="/support-at-college" title="Support at College" aria-label="Support at College" wire:navigate>
+                            Support at College
+                        </a>
+
+                        <!--[if BLOCK]><![endif]-->                            <span @click="expanded = !expanded" class="w-full text-right cursor-pointer"><i x-show="expanded" class="fa-solid fa-chevron-up font-light text-base lg:text-lg"></i> <i x-show="!expanded" class="fa-solid fa-chevron-down font-light text-base lg:text-lg"></i></span>
+                        <!--[if ENDBLOCK]><![endif]-->
+                    </div>
+
+                    <!--[if BLOCK]><![endif]-->                        <div x-show="expanded" class="w-full bg-white px-4 lg:px-8 py-2 lg:py-4">
+                            <div>
+    <ul class="children w-full bg-white">
+        <!--[if BLOCK]><![endif]-->            <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/support-at-college/enrolment-application" title="Application &amp; Enrolment" aria-label="Application &amp; Enrolment" wire:navigate>
+                        Application &amp; Enrolment
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/support-at-college/careers-advice-and-guidance" title="Careers Advice &amp; Guidance" aria-label="Careers Advice &amp; Guidance" wire:navigate>
+                        Careers Advice &amp; Guidance
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/support-at-college/childcare-nursery" title="Childcare and Nursery" aria-label="Childcare and Nursery" wire:navigate>
+                        Childcare and Nursery
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/support-at-college/exam-access-arrangements" title="Exam Access Arrangements" aria-label="Exam Access Arrangements" wire:navigate>
+                        Exam Access Arrangements
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/support-at-college/financial-support" title="Financial Support" aria-label="Financial Support" wire:navigate>
+                        Financial Support
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/support-at-college/how-to-cope-with-exam-stress" title="How to Cope with Exam Stress" aria-label="How to Cope with Exam Stress" wire:navigate>
+                        How to Cope with Exam Stress
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/support-at-college/learning-support" title="Learning Support" aria-label="Learning Support" wire:navigate>
+                        Learning Support
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/support-at-college/resources-parents-carers" title="Resources (Parents &amp; Carers)" aria-label="Resources (Parents &amp; Carers)" wire:navigate>
+                        Resources (Parents &amp; Carers)
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/support-at-college/safeguarding" title="Safeguarding" aria-label="Safeguarding" wire:navigate>
+                        Safeguarding
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/support-at-college/wellbeing" title="Wellbeing" aria-label="Wellbeing" wire:navigate>
+                        Wellbeing
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+        <!--[if ENDBLOCK]><![endif]-->
+    </ul>
+</div>                        </div>
+                    <!--[if ENDBLOCK]><![endif]-->
+                </li>
+                            <li x-data="{ expanded: false }" class="group relative bg-[#F0F0F0]">
+                    <div class="flex items-center w-full justify-between px-4 lg:px-8 py-4">
+                        <a class="w-full text-lg lg:text-[20px] text-black transition focus:font-bold hover:text-brand-pink-100" accesskey="3" href="/college-life" title="College Life" aria-label="College Life" wire:navigate>
+                            College Life
+                        </a>
+
+                        <!--[if BLOCK]><![endif]-->                            <span @click="expanded = !expanded" class="w-full text-right cursor-pointer"><i x-show="expanded" class="fa-solid fa-chevron-up font-light text-base lg:text-lg"></i> <i x-show="!expanded" class="fa-solid fa-chevron-down font-light text-base lg:text-lg"></i></span>
+                        <!--[if ENDBLOCK]><![endif]-->
+                    </div>
+
+                    <!--[if BLOCK]><![endif]-->                        <div x-show="expanded" class="w-full bg-white px-4 lg:px-8 py-2 lg:py-4">
+                            <div>
+    <ul class="children w-full bg-white">
+        <!--[if BLOCK]><![endif]-->            <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/college-life/alumni" title="Alumni" aria-label="Alumni" wire:navigate>
+                        Alumni
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/college-life/exam-results" title="Exam Results" aria-label="Exam Results" wire:navigate>
+                        Exam Results
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/college-life/news" title="News" aria-label="News" wire:navigate>
+                        News
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/college-life/open-days-events" title="Open Days &amp; Events" aria-label="Open Days &amp; Events" wire:navigate>
+                        Open Days &amp; Events
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/college-life/our-campuses" title="Our Campuses" aria-label="Our Campuses" wire:navigate>
+                        Our Campuses
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/college-life/students-union" title="Students&#039; Union" aria-label="Students&#039; Union" wire:navigate>
+                        Students&#039; Union
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/college-life/term-dates-calendar" title="Term Dates &amp; Calendar" aria-label="Term Dates &amp; Calendar" wire:navigate>
+                        Term Dates &amp; Calendar
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/college-life/travel-to-college-bus-routes" title="Travel to College / Bus Routes" aria-label="Travel to College / Bus Routes" wire:navigate>
+                        Travel to College / Bus Routes
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/college-life/why-choose-us" title="Why Choose Us" aria-label="Why Choose Us" wire:navigate>
+                        Why Choose Us
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/college-life/work-experience" title="Work Experience" aria-label="Work Experience" wire:navigate>
+                        Work Experience
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+        <!--[if ENDBLOCK]><![endif]-->
+    </ul>
+</div>                        </div>
+                    <!--[if ENDBLOCK]><![endif]-->
+                </li>
+                            <li x-data="{ expanded: false }" class="group relative bg-[#F0F0F0]">
+                    <div class="flex items-center w-full justify-between px-4 lg:px-8 py-4">
+                        <a class="w-full text-lg lg:text-[20px] text-black transition focus:font-bold hover:text-brand-pink-100" accesskey="4" href="/public-facilities" title="Public Facilities" aria-label="Public Facilities" wire:navigate>
+                            Public Facilities
+                        </a>
+
+                        <!--[if BLOCK]><![endif]-->                            <span @click="expanded = !expanded" class="w-full text-right cursor-pointer"><i x-show="expanded" class="fa-solid fa-chevron-up font-light text-base lg:text-lg"></i> <i x-show="!expanded" class="fa-solid fa-chevron-down font-light text-base lg:text-lg"></i></span>
+                        <!--[if ENDBLOCK]><![endif]-->
+                    </div>
+
+                    <!--[if BLOCK]><![endif]-->                        <div x-show="expanded" class="w-full bg-white px-4 lg:px-8 py-2 lg:py-4">
+                            <div>
+    <ul class="children w-full bg-white">
+        <!--[if BLOCK]><![endif]-->            <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/public-facilities/the-academy-restaurant" title="The Academy Restaurant" aria-label="The Academy Restaurant" wire:navigate>
+                        The Academy Restaurant
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/public-facilities/the-academy-salon" title="The Academy Salon" aria-label="The Academy Salon" wire:navigate>
+                        The Academy Salon
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+        <!--[if ENDBLOCK]><![endif]-->
+    </ul>
+</div>                        </div>
+                    <!--[if ENDBLOCK]><![endif]-->
+                </li>
+                            <li x-data="{ expanded: false }" class="group relative bg-[#F0F0F0]">
+                    <div class="flex items-center w-full justify-between px-4 lg:px-8 py-4">
+                        <a class="w-full text-lg lg:text-[20px] text-black transition focus:font-bold hover:text-brand-pink-100" accesskey="5" href="/about-us" title="About Us" aria-label="About Us" wire:navigate>
+                            About Us
+                        </a>
+
+                        <!--[if BLOCK]><![endif]-->                            <span @click="expanded = !expanded" class="w-full text-right cursor-pointer"><i x-show="expanded" class="fa-solid fa-chevron-up font-light text-base lg:text-lg"></i> <i x-show="!expanded" class="fa-solid fa-chevron-down font-light text-base lg:text-lg"></i></span>
+                        <!--[if ENDBLOCK]><![endif]-->
+                    </div>
+
+                    <!--[if BLOCK]><![endif]-->                        <div x-show="expanded" class="w-full bg-white px-4 lg:px-8 py-2 lg:py-4">
+                            <div>
+    <ul class="children w-full bg-white">
+        <!--[if BLOCK]><![endif]-->            <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/about-us/college-of-sanctuary" title="College of Sanctuary" aria-label="College of Sanctuary" wire:navigate>
+                        College of Sanctuary
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/about-us/contact-us" title="Contact Us" aria-label="Contact Us" wire:navigate>
+                        Contact Us
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/about-us/edi" title="EDI" aria-label="EDI" wire:navigate>
+                        EDI
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/about-us/feedback-complaints" title="Feedback &amp; Complaints" aria-label="Feedback &amp; Complaints" wire:navigate>
+                        Feedback &amp; Complaints
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/about-us/governance" title="Governance" aria-label="Governance" wire:navigate>
+                        Governance
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/about-us/leadership-team" title="Leadership Team" aria-label="Leadership Team" wire:navigate>
+                        Leadership Team
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/about-us/ofsted-report" title="Ofsted Report" aria-label="Ofsted Report" wire:navigate>
+                        Ofsted Report
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/about-us/policies-and-procedures" title="Policies &amp; Procedures" aria-label="Policies &amp; Procedures" wire:navigate>
+                        Policies &amp; Procedures
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/about-us/reports" title="Reports" aria-label="Reports" wire:navigate>
+                        Reports
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/about-us/schools" title="Schools" aria-label="Schools" wire:navigate>
+                        Schools
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+                    <!--[if BLOCK]><![endif]-->                <li class="py-3 last-of-type:mb-0">
+                    <a class="text-base lg:text-lg text-black transition focus:font-bold hover:text-brand-pink-100" href="/about-us/work-for-us" title="Work for us" aria-label="Work for us" wire:navigate>
+                        Work for us
+                    </a>
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+        <!--[if ENDBLOCK]><![endif]-->
+    </ul>
+</div>                        </div>
+                    <!--[if ENDBLOCK]><![endif]-->
+                </li>
+                            <li x-data="{ expanded: false }" class="group relative bg-[#F0F0F0]">
+                    <div class="flex items-center w-full justify-between px-4 lg:px-8 py-4">
+                        <a class="w-full text-lg lg:text-[20px] text-black transition focus:font-bold hover:text-brand-pink-100" accesskey="6" href="/employers" title="Employers" aria-label="Employers" wire:navigate>
+                            Employers
+                        </a>
+
+                        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+                    </div>
+
+                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+                </li>
+            <!--[if ENDBLOCK]><![endif]-->
+        </ul>
+    </nav>
+</div>
+
+
+
+
+
+            </div>
+        </div>
+    </header>
+</div><div class="lg:container pt-[102px] lg:pt-0">
+        <div class="relative flex justify-center items-center">
+            <img
+                    src="/skin/error.jpg"
+                    alt="404 Page Not Found"
+                    class="h-[668px] w-full object-cover rounded-2xl"
+            />
+
+            <button type="button" onclick="history.back()" class="button-lg bg-brand-pink-100 text-white hover:bg-[#000000] hover:text-white transition ease-in-out absolute top-8 left-4 lg:left-8">
+                Back
+            </button>
+
+            <div class="bg-white absolute p-8 rounded-2xl lg:max-w-[550px] mx-4 lg:mx-0">
+                <div class="ck-editor">
+                    <h1 class="text-h1 lg:text-80px font-bold text-black mb-5">404 Page not found</h1>
+
+                    <p>
+                        Sorry, we couldn't find the page you were looking for.
+                        Here's a few things you could try:
+                    </p>
+
+                    <ul>
+                        <li>If you typed the URL directly, make sure the spelling is correct.</li>
+                        <li>Visit our homepage as the link is possibly outdated.</li>
+                    </ul>
+                </div>
+
+                <div class="flex lg:flex-row flex-col gap-5 lg:items-center mt-8">
+                    <a wire:navigate href="/" title="Home" aria-label="Home" class="block w-full lg:w-auto lg:inline text-center button-lg rounded-3xl bg-white text-base lg:text-lg text-black shadow-brand-blue-100 hover:bg-brand-blue-100">
+                        Home
+                    </a>
+
+                    <a wire:navigate href="/study" title="Study" aria-label="Study" class="block w-full lg:w-auto lg:inline text-center button-lg rounded-3xl bg-white text-base lg:text-lg text-black shadow-brand-green-100 hover:bg-brand-green-100">
+                        Study
+                    </a>
+
+                    <a wire:navigate href="/course-areas" title="Course Areas" aria-label="Course Areas" class="block w-full lg:w-auto text-center button-lg rounded-3xl bg-white text-base lg:text-lg text-black shadow-brand-purple-100 hover:bg-brand-purple-100 hover:text-white">
+                        Course Areas
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+<div>
+    <footer role="contentinfo">
+        <div class="bg-[#F0F0F0] py-[40px] lg:py-[60px]">
+            <div class="container mb-8">
+                <div class="grid grid-cols-12 gap-8">
+                    <div class="col-span-12 lg:col-span-4 flex flex-col gap-4">
+                        <div>
+                            <a href="/" title="Go to homepage" aria-label="Go to homepage" class="block" wire:navigate>
+                                <img data-src="/skin/footer-logo.svg" alt="logo" class="lazyload max-w-full h-auto">
+                            </a>
+                        </div>
+
+                                                    <ul class="flex flex-row pt-2 gap-3 mb-4 justify-left md:justify-start">
+                                                                    <li>
+                                        <a href="https://x.com/COLcollege" title="Find us on https://x.com/COLcollege!" aria-label="Find us on https://x.com/COLcollege!" class="w-[30px] h-[30px] flex items-center justify-center bg-brand-blue text-white rounded-sm hover:scale-105 transition social-x" target="_blank">
+                                            <i class="fa-brands fa-x-twitter text-[24px]"></i>
+                                        </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.facebook.com/COLCollege" title="Find us on https://www.facebook.com/COLCollege!" aria-label="Find us on https://www.facebook.com/COLCollege!" class="w-[30px] h-[30px] flex items-center justify-center bg-brand-blue text-white rounded-sm hover:scale-105 transition social-facebook" target="_blank">
+                                            <i class="fa-brands fa-facebook text-[24px]"></i>
+                                        </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.instagram.com/COLCollege" title="Find us on https://www.instagram.com/COLCollege!" aria-label="Find us on https://www.instagram.com/COLCollege!" class="w-[30px] h-[30px] flex items-center justify-center bg-brand-blue text-white rounded-sm hover:scale-105 transition social-instagram" target="_blank">
+                                            <i class="fa-brands fa-instagram text-[24px]"></i>
+                                        </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.youtube.com/user/COLCollege" title="Find us on https://www.youtube.com/user/COLCollege!" aria-label="Find us on https://www.youtube.com/user/COLCollege!" class="w-[30px] h-[30px] flex items-center justify-center bg-brand-blue text-white rounded-sm hover:scale-105 transition social-youtube" target="_blank">
+                                            <i class="fa-brands fa-youtube text-[24px]"></i>
+                                        </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.linkedin.com/school/colcollege/" title="Find us on https://www.linkedin.com/school/colcollege/!" aria-label="Find us on https://www.linkedin.com/school/colcollege/!" class="w-[30px] h-[30px] flex items-center justify-center bg-brand-blue text-white rounded-sm hover:scale-105 transition social-linkedin" target="_blank">
+                                            <i class="fa-brands fa-linkedin text-[24px]"></i>
+                                        </a>
+                                    </li>
+                                                                    <li>
+                                        <a href="https://www.tiktok.com/@colcollege" title="Find us on https://www.tiktok.com/@colcollege!" aria-label="Find us on https://www.tiktok.com/@colcollege!" class="w-[30px] h-[30px] flex items-center justify-center bg-brand-blue text-white rounded-sm hover:scale-105 transition social-tiktok" target="_blank">
+                                            <i class="fa-brands fa-tiktok text-[24px]"></i>
+                                        </a>
+                                    </li>
+                                                            </ul>
+                        
+                                                    <div class="flex flex-row gap-4 lg:gap-8">
+                                <i class="lg:hidden 2xl:block fa-solid fa-phone text-base lg:text-lg text-[#F05131]"></i>
+
+                                <p class="text-base lg:text-lg"><a class="hover:underline" href="tel:0151 252 3000" title="Phone 0151 252 3000" aria-label="Phone 0151 252 3000">0151 252 3000</a></p>
+                            </div>
+                        
+                                                    <div class="flex flex-row gap-4 lg:gap-8">
+                                <i class="lg:hidden 2xl:block fa-solid fa-envelope text-base lg:text-lg text-[#59B38E]"></i>
+
+                                <p class="text-base lg:text-lg"><a class="hover:underline" href="mailto:enquiry@liv-coll.ac.uk" title="Email enquiry@liv-coll.ac.uk" aria-label="Email enquiry@liv-coll.ac.uk">enquiry@liv-coll.ac.uk</a></p>
+                            </div>
+                                            </div>
+
+                    <div class="col-span-6 lg:col-span-3">
+                                                    <nav role="navigation" aria-labelledby="useful-links">
+                                <h4 id="useful-links" class="text-base lg:text-lg mb-4 lg:mb-8 font-bold">Useful Links</h4>
+
+                                <ul>
+                                                                            <li class="mb-4">
+                                            <a class="text-[16px] lg:text-[18px] hover:underline" href="https://liv-coll.ac.uk/study" title="Study" aria-label="Study" wire:navigate>
+                                                Study
+                                            </a>
+                                        </li>
+                                                                            <li class="mb-4">
+                                            <a class="text-[16px] lg:text-[18px] hover:underline" href="https://liv-coll.ac.uk/course-areas" title="Course Areas" aria-label="Course Areas" wire:navigate>
+                                                Course Areas
+                                            </a>
+                                        </li>
+                                                                            <li class="mb-4">
+                                            <a class="text-[16px] lg:text-[18px] hover:underline" href="https://liv-coll.ac.uk/support-at-college" title="Support at College" aria-label="Support at College" wire:navigate>
+                                                Support at College
+                                            </a>
+                                        </li>
+                                                                            <li class="mb-4">
+                                            <a class="text-[16px] lg:text-[18px] hover:underline" href="https://liv-coll.ac.uk/college-life" title="College Life" aria-label="College Life" wire:navigate>
+                                                College Life
+                                            </a>
+                                        </li>
+                                                                            <li class="mb-4">
+                                            <a class="text-[16px] lg:text-[18px] hover:underline" href="https://liv-coll.ac.uk/public-facilities" title="Public Facilities" aria-label="Public Facilities" wire:navigate>
+                                                Public Facilities
+                                            </a>
+                                        </li>
+                                                                            <li class="mb-4">
+                                            <a class="text-[16px] lg:text-[18px] hover:underline" href="https://liv-coll.ac.uk/about-us/work-for-us" title="Work for us" aria-label="Work for us" wire:navigate>
+                                                Work for us
+                                            </a>
+                                        </li>
+                                                                    </ul>
+
+                            </nav>
+                                            </div>
+
+                    <div class="col-span-6 lg:col-span-3">
+                                                    <nav role="navigation" aria-labelledby="information-navigation">
+                                <h4 id="information-navigation" class="text-base lg:text-lg mb-4 lg:mb-8 font-bold">Information</h4>
+
+                                <ul>
+                                                                                                                        <li class="mb-4">
+                                                <a  class="text-[16px] lg:text-[18px] hover:underline" href="/student-resources" title="Student Resources" aria-label="Student Resources" class="pr-2" wire:navigate>
+                                                    Student Resources
+                                                </a>
+                                            </li>
+                                                                                                                                                                <li class="mb-4">
+                                                <a  class="text-[16px] lg:text-[18px] hover:underline" href="/staff-resources" title="Staff Resources" aria-label="Staff Resources" class="pr-2" wire:navigate>
+                                                    Staff Resources
+                                                </a>
+                                            </li>
+                                                                                                                                                                <li class="mb-4">
+                                                <a  class="text-[16px] lg:text-[18px] hover:underline" href="/accessibility" title="Accessibility" aria-label="Accessibility" class="pr-2" wire:navigate>
+                                                    Accessibility
+                                                </a>
+                                            </li>
+                                                                                                                                                                <li class="mb-4">
+                                                <a  class="text-[16px] lg:text-[18px] hover:underline" href="/terms-conditions" title="Terms &amp; Conditions" aria-label="Terms &amp; Conditions" class="pr-2" wire:navigate>
+                                                    Terms &amp; Conditions
+                                                </a>
+                                            </li>
+                                                                                                                                                                <li class="mb-4">
+                                                <a  class="text-[16px] lg:text-[18px] hover:underline" href="/sitemap" title="Sitemap" aria-label="Sitemap" class="pr-2" wire:navigate>
+                                                    Sitemap
+                                                </a>
+                                            </li>
+                                                                                                                                                                <li class="mb-4">
+                                                <a  class="text-[16px] lg:text-[18px] hover:underline" href="/privacy-policy" title="Policies" aria-label="Policies" class="pr-2" wire:navigate>
+                                                    Policies
+                                                </a>
+                                            </li>
+                                                                                                            </ul>
+
+                            </nav>
+                                            </div>
+
+                    <div class="col-span-12 lg:col-span-2 text-left lg:text-right mb-4">
+
+
+
+
+                        <div id="__ba_launchpad" class="reachdeck "></div>
+                        <script type="text/javascript" src="https://www.browsealoud.com/plus/scripts/3.1.0/ba.js" crossorigin="anonymous" integrity="sha256-VCrJcQdV3IbbIVjmUyF7DnCqBbWD1BcZ/1sda2KWeFc= sha384-k2OQFn+wNFrKjU9HiaHAcHlEvLbfsVfvOnpmKBGWVBrpmGaIleDNHnnCJO4z2Y2H sha512-gxDfysgvGhVPSHDTieJ/8AlcIEjFbF3MdUgZZL2M5GXXDdIXCcX0CpH7Dh6jsHLOLOjRzTFdXASWZtxO+eMgyQ=="></script>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="grid grid-cols-12">
+                    <div class="col-span-12 md:col-span-6 text-left">
+                        <p class="text-base lg:text-lg font-light">&copy; The City of Liverpool College 2025</p>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-6 text-left lg:text-right">
+                        <a class="text-base lg:text-lg font-light" href="https://bluestormdesign.co.uk/?utm_source=&amp;utm_medium=Footer+Link&amp;utm_campaign=Client+Links" title="Web Design by Bluestorm Design &amp; Marketing" target="_blank">
+                            Design by <img width="85" height="14" src="/skin/bluestorm.svg" alt="" class="inline">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <div class="bg-white">
+    <div class="container py-8">
+        <div class="flex gap-8 items-center justify-between overflow-x-scroll no-scrollbar">
+                                                <div>
+                        <a href="https://lcrbemore.co.uk/" title="Liverpool City Region" aria-label="Liverpool City Region" target="_blank">
+                            
+                            <img data-src="https://d2ip0xki6a1c73.cloudfront.net/images/be_more_skilled.png" alt="Liverpool City Region" class="lazyload">
+
+                                                    </a>
+                    </div>
+                                                                <div>
+                        <a href="" title="Education &amp; Skills Funding Agency" aria-label="Education &amp; Skills Funding Agency" target="_blank">
+                            
+                            <img data-src="https://d2ip0xki6a1c73.cloudfront.net/images/ESFA3-1.png" alt="Education &amp; Skills Funding Agency" class="lazyload">
+
+                                                    </a>
+                    </div>
+                                            
+                            <img data-src="https://d2ip0xki6a1c73.cloudfront.net/images/Matrix-Logo-1.png" alt="Matrix" class="lazyload">
+
+                                                        
+                            <img data-src="https://d2ip0xki6a1c73.cloudfront.net/images/ofsted-good-1.png" alt="Ofsted" class="lazyload">
+
+                                                        
+                            <img data-src="https://d2ip0xki6a1c73.cloudfront.net/images/cyber-essentials-badge-high-res-1.png" alt="Cyber Essentials" class="lazyload">
+
+                                                                            <div>
+                        <a href="" title="Memebr QAA" aria-label="Memebr QAA" target="_blank">
+                            
+                            <img data-src="https://d2ip0xki6a1c73.cloudfront.net/images/QAA_Membership_Badge_colour-scaled-1.png" alt="Memebr QAA" class="lazyload">
+
+                                                    </a>
+                    </div>
+                                            
+                            <img data-src="https://d2ip0xki6a1c73.cloudfront.net/images/LogoESF_Col_Portrait-1.png" alt="European Union Social Fund" class="lazyload">
+
+                                                        
+                            <img data-src="https://d2ip0xki6a1c73.cloudfront.net/images/CIFE-Member-Logo.png" alt="Chartered Institute of Further Education" class="lazyload">
+
+                                                </div>
+    </div>
+</div></div><link rel="modulepreload" href="https://liv-coll.ac.uk/build/assets/app-1044a6d4.js" /><script type="module" src="https://liv-coll.ac.uk/build/assets/app-1044a6d4.js" data-navigate-track="reload"></script><script src="https://liv-coll.ac.uk/vendor/livewire/livewire.min.js?id=df3a17f2"   data-csrf="FrZ6erJprTpgnK00R3vtI78oJyC8NwjTHCRf1eWF" data-update-uri="/livewire/update" data-navigate-once="true"></script>
+</body>
+</html>
