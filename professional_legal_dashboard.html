@@ -13,50 +13,19 @@
             .page-break { page-break-before: always; }
         }
 
-        /* Corporate Hero Header */
-        .corporate-hero {
-            position: relative;
+        /* Justice Minds Forensic Intelligence Header */
+        .justice-minds-header {
             width: 100%;
-            height: 300px;
-            overflow: hidden;
-            background: linear-gradient(135deg, #0b0c0c 0%, #1d70b8 100%);
+            height: auto;
+            display: block;
+            margin: 0;
+            padding: 0;
         }
 
-        .corporate-hero img {
+        .justice-minds-header img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.8;
-        }
-
-        .corporate-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(11, 12, 12, 0.8), rgba(29, 112, 184, 0.6));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-
-        .corporate-title {
-            color: white;
-            font-size: 36px;
-            font-weight: bold;
-            text-align: center;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            margin-bottom: 10px;
-        }
-
-        .corporate-subtitle {
-            color: #ffb000;
-            font-size: 18px;
-            font-weight: bold;
-            text-align: center;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            height: auto;
+            display: block;
         }
 
         /* Professional Header Bar */
@@ -102,40 +71,16 @@
             text-decoration: none;
         }
 
-        /* Professional Logo Strip */
-        .logo-strip {
-            background: linear-gradient(90deg, #ffffff, #f8f9fa);
-            padding: 15px 0;
-            border-bottom: 2px solid #1d70b8;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        /* Justice Minds Footer */
+        .justice-minds-footer {
+            width: 100%;
+            margin-top: 50px;
         }
 
-        .logo-container {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .logo-item {
-            height: 40px;
-            opacity: 0.8;
-            transition: all 0.3s ease;
-            margin: 5px;
-        }
-
-        .logo-item:hover {
-            opacity: 1;
-            transform: scale(1.05);
-        }
-
-        .logo-item img {
-            height: 100%;
-            width: auto;
-            object-fit: contain;
+        .justice-minds-footer img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
         
         /* Professional spacing and typography */
@@ -322,8 +267,9 @@
             border-left: 5px solid #1d70b8;
         }
 
-        /* Qualification Evidence Toggles */
+        /* Qualification Evidence Toggles - HIDDEN FOR NOW */
         .qualification-section {
+            display: none; /* Hidden as requested - can be re-enabled later */
             background-color: #ffffff; 
             border: 2px solid #00703c; 
             margin: 30px 0; 
@@ -597,34 +543,10 @@
         </div>
     </header>
 
-    <!-- Professional Logo Strip -->
-    <div class="logo-strip">
-        <div class="logo-container">
-            <div class="logo-item">
-                <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/logos/university_of_law.svg" alt="University of Law">
-            </div>
-            <div class="logo-item">
-                <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/logos/nspcc.svg" alt="NSPCC">
-            </div>
-            <div class="logo-item">
-                <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/logos/city_of_liverpool_college.svg" alt="City of Liverpool College">
-            </div>
-            <div class="logo-item">
-                <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/logos/liverpool_city_council.svg" alt="Liverpool City Council">
-            </div>
-            <div class="logo-item">
-                <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/logos/city_of_westminster.svg" alt="City of Westminster">
-            </div>
-            <div class="logo-item">
-                <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/logos/liverpool_echo.png" alt="Liverpool Echo">
-            </div>
-            <div class="logo-item">
-                <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/logos/scie.svg" alt="SCIE">
-            </div>
-            <div class="logo-item">
-                <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/logos/house_of_commons.svg" alt="House of Commons">
-            </div>
-        </div>
+    <!-- Justice Minds Forensic Intelligence Header -->
+    <div class="justice-minds-header">
+        <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/branding/justice_minds_header.png" 
+             alt="Justice Minds Forensic Intelligence - London, United Kingdom">
     </div>
 
     <!-- Professional Header Bar -->
