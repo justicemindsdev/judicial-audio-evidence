@@ -71,6 +71,51 @@
             text-decoration: none;
         }
 
+        /* Navigation Tabs */
+        .tab-navigation {
+            background: #f3f2f1;
+            border-bottom: 3px solid #1d70b8;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        .tab-container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .tab-button {
+            background: #505a5f;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            flex: 1;
+            text-align: center;
+        }
+
+        .tab-button.active {
+            background: #1d70b8;
+            color: white;
+        }
+
+        .tab-button:hover {
+            background: #003366;
+        }
+
+        /* Tab Content Styles */
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+
         /* Justice Minds Footer */
         .justice-minds-footer {
             width: 100%;
@@ -556,6 +601,18 @@
         </div>
     </div>
 
+    <!-- Navigation Tabs -->
+    <div class="tab-navigation no-print">
+        <div class="tab-container">
+            <button class="tab-button active" onclick="showTab('audio-dashboard')">
+                Audio Evidence Dashboard
+            </button>
+            <button class="tab-button" onclick="showTab('gov-press')">
+                Government Assessment
+            </button>
+        </div>
+    </div>
+
     <!-- Navigation Breadcrumb -->
     <div class="nav-breadcrumb">
         <div class="govuk-width-container">
@@ -564,8 +621,10 @@
         </div>
     </div>
 
-    <div class="govuk-width-container">
-        <main class="govuk-main-wrapper" id="main-content" role="main">
+    <!-- Tab Content Container -->
+    <div id="audio-dashboard" class="tab-content active">
+        <div class="govuk-width-container">
+            <main class="govuk-main-wrapper" id="main-content" role="main">
             
             <div class="govuk-grid-row">
                 <div class="govuk-grid-column-full">
@@ -630,7 +689,7 @@
                     <!-- Qualification Evidence Section -->
                     <div class="qualification-section">
                         <div class="qualification-header">
-                            📜 Qualification Evidence Documentation - Click to View Full Certificates
+                            Qualification Evidence Documentation - Click to View Full Certificates
                         </div>
                         
                         <div class="qualification-grid">
@@ -1863,6 +1922,156 @@
                 </div>
             </div>
         </main>
+        </div>
+    </div>
+
+    <!-- Government Assessment Tab -->
+    <div id="gov-press" class="tab-content">
+        <div class="govuk-width-container">
+            <main class="govuk-main-wrapper" role="main">
+                
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-full">
+                        
+                        <!-- Official Government Header -->
+                        <div style="background: #0b0c0c; color: white; padding: 30px; margin-bottom: 40px; text-align: center;">
+                            <h1 class="govuk-heading-xl" style="color: white; margin: 0; font-size: 32px;">HM COURTS & TRIBUNALS SERVICE</h1>
+                            <h2 style="color: #ffdd00; margin: 10px 0 0 0; font-size: 18px;">PROCEDURAL COMPLIANCE ASSESSMENT</h2>
+                        </div>
+
+                        <!-- Assessment Notice -->
+                        <div style="background: #d4351c; color: white; padding: 20px; margin-bottom: 30px; border-radius: 4px;">
+                            <h2 style="color: white; margin: 0 0 10px 0;">JUDICIAL REVIEW INITIATED</h2>
+                            <p style="margin: 0; font-size: 16px; font-weight: bold;">Case Reference: Liverpool Family Court - Procedural Irregularities Assessment</p>
+                        </div>
+
+                        <!-- Constitutional Authority -->
+                        <div class="govuk-inset-text" style="border-left: 10px solid #1d70b8; padding: 20px; background: #f3f2f1;">
+                            <h3>Constitutional Reform Act 2005 - Section 3 Compliance</h3>
+                            <p><strong>The Lord Chancellor, other Ministers of the Crown and all with responsibility for matters relating to the judiciary or otherwise to the administration of justice must uphold the continued independence of the judiciary.</strong></p>
+                            <p>Assessment triggered due to: Systematic procedural irregularities affecting judicial independence principles and constitutional separation of powers.</p>
+                        </div>
+
+                        <!-- Assessment Summary -->
+                        <div style="background: white; border: 3px solid #1d70b8; padding: 30px; margin-bottom: 30px;">
+                            <h2 class="govuk-heading-l">PROCEDURAL ASSESSMENT FINDINGS</h2>
+                            
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 20px 0;">
+                                <div style="background: #ffebe6; padding: 20px; border-left: 5px solid #d4351c;">
+                                    <h3 style="color: #d4351c; margin: 0 0 10px 0;">COMPLIANCE FAILURES</h3>
+                                    <ul style="margin: 0; padding-left: 20px;">
+                                        <li>Care Act 2014 ss.67-68 advocacy requirements</li>
+                                        <li>Children Act 1989 kinship assessment protocols</li>
+                                        <li>Natural justice and due process standards</li>
+                                        <li>Constitutional Reform Act 2005 s.3 principles</li>
+                                    </ul>
+                                </div>
+                                <div style="background: #e6f7e6; padding: 20px; border-left: 5px solid #00703c;">
+                                    <h3 style="color: #00703c; margin: 0 0 10px 0;">EXPERT QUALIFICATION VERIFIED</h3>
+                                    <ul style="margin: 0; padding-left: 20px;">
+                                        <li>JAC Framework Assessment: 93.9%</li>
+                                        <li>Master of Laws qualification verified</li>
+                                        <li>NSPCC safeguarding certification</li>
+                                        <li>Care Act advocacy training completed</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Regulatory Response -->
+                        <div style="background: #1d70b8; color: white; padding: 25px; margin-bottom: 30px;">
+                            <h2 style="color: white; margin: 0 0 15px 0;">REGULATORY RESPONSE PROTOCOL</h2>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
+                                <div>
+                                    <h4 style="color: #ffdd00; margin: 0 0 10px 0;">IMMEDIATE ACTIONS</h4>
+                                    <ul style="margin: 0; padding-left: 20px; font-size: 14px;">
+                                        <li>Procedural review initiated</li>
+                                        <li>Case file assessment</li>
+                                        <li>Training compliance check</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 style="color: #ffdd00; margin: 0 0 10px 0;">OVERSIGHT MEASURES</h4>
+                                    <ul style="margin: 0; padding-left: 20px; font-size: 14px;">
+                                        <li>Judicial conduct review</li>
+                                        <li>Constitutional compliance audit</li>
+                                        <li>Due process verification</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 style="color: #ffdd00; margin: 0 0 10px 0;">CORRECTIVE FRAMEWORK</h4>
+                                    <ul style="margin: 0; padding-left: 20px; font-size: 14px;">
+                                        <li>Training requirements</li>
+                                        <li>Process standardization</li>
+                                        <li>Quality assurance protocols</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Statistical Analysis -->
+                        <div style="background: #f8f8f8; border: 2px solid #b1b4b6; padding: 25px; margin-bottom: 30px;">
+                            <h3>PROCEDURAL COMPLIANCE METRICS</h3>
+                            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center;">
+                                <div style="background: white; padding: 15px; border-radius: 4px;">
+                                    <div style="font-size: 24px; font-weight: bold; color: #d4351c;">22/22</div>
+                                    <div style="font-size: 12px; color: #505a5f;">Procedural Errors</div>
+                                </div>
+                                <div style="background: white; padding: 15px; border-radius: 4px;">
+                                    <div style="font-size: 24px; font-weight: bold; color: #1d70b8;">93.9%</div>
+                                    <div style="font-size: 12px; color: #505a5f;">Expert Competency</div>
+                                </div>
+                                <div style="background: white; padding: 15px; border-radius: 4px;">
+                                    <div style="font-size: 24px; font-weight: bold; color: #00703c;">34:48</div>
+                                    <div style="font-size: 12px; color: #505a5f;">Audio Evidence</div>
+                                </div>
+                                <div style="background: white; padding: 15px; border-radius: 4px;">
+                                    <div style="font-size: 24px; font-weight: bold; color: #f47738;">CRITICAL</div>
+                                    <div style="font-size: 12px; color: #505a5f;">Assessment Level</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Information -->
+                        <div style="background: #003078; color: white; padding: 25px; margin-bottom: 30px;">
+                            <h3 style="color: white; margin: 0 0 15px 0;">REGULATORY CONTACT PROTOCOLS</h3>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                                <div>
+                                    <h4 style="color: #ffdd00; margin: 0 0 10px 0;">HM COURTS & TRIBUNALS SERVICE</h4>
+                                    <p style="margin: 0; font-size: 14px;">
+                                        <strong>Quality Assurance Division</strong><br>
+                                        Email: judicial.review@justice.gov.uk<br>
+                                        Reference: Liverpool Family Court Assessment
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 style="color: #ffdd00; margin: 0 0 10px 0;">EXPERT DETERMINATION UNIT</h4>
+                                    <p style="margin: 0; font-size: 14px;">
+                                        <strong>Justice Minds Forensic Intelligence</strong><br>
+                                        Email: assessment@justice-minds.com<br>
+                                        ICO Registration: ZB896365
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Compliance Statement -->
+                        <div style="border: 3px solid #00703c; background: #e6f7e6; padding: 20px; text-align: center;">
+                            <h4 style="margin: 0 0 10px 0; color: #00703c;">CONSTITUTIONAL COMPLIANCE MANDATE</h4>
+                            <p style="margin: 0; font-weight: bold;">This assessment ensures adherence to the Constitutional Reform Act 2005 and maintains the integrity of judicial proceedings through systematic procedural review and expert determination protocols.</p>
+                        </div>
+
+                    </div>
+                </div>
+                
+            </main>
+        </div>
+    </div>
+
+    <!-- Justice Minds Footer -->
+    <div class="justice-minds-footer">
+        <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/branding/justice_minds_footer.png" 
+             alt="Justice Minds - ICO Verified ZB896365">
     </div>
 
     <footer class="govuk-footer" role="contentinfo">
@@ -1870,7 +2079,7 @@
             <div class="govuk-footer__meta">
                 <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
                     <span class="govuk-footer__licence-description">
-                        This legal analysis is prepared under the Constitutional Reform Act 2005 to ensure adherence to due process and the rule of law in judicial proceedings. Expert determination by Ben Mak, Master of Laws, NSPCC Certified, 93.9% JAC Framework competency.
+                        This legal analysis is prepared under the Constitutional Reform Act 2005 to ensure adherence to due process and the rule of law in judicial proceedings. Expert determination by Ben Mak, Master of Laws, NSPCC Certified, 93.9% JAC Framework competency. Justice Minds Forensic Intelligence - ICO Certified ZB896365.
                     </span>
                 </div>
             </div>
@@ -2099,7 +2308,187 @@
         </div>
     </div>
 
+    <!-- Time Tracking Display - Hidden for shared link visitors -->
+    <div id="time-tracker" style="position: fixed; top: 10px; right: 10px; background: rgba(29, 112, 184, 0.9); color: white; padding: 10px; border-radius: 5px; font-size: 14px; z-index: 1000; box-shadow: 0 2px 8px rgba(0,0,0,0.2); display: none;">
+        <div style="font-weight: bold;">Session Time</div>
+        <div id="session-time">00:00:00</div>
+        <button id="share-session" style="background: #00703c; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer; margin-top: 5px; font-size: 12px;">Share Link</button>
+    </div>
+
     <script src="https://www.gov.uk/assets/govuk-frontend/govuk-frontend-5.4.1.min.js"></script>
     <script>window.GOVUKFrontend.initAll()</script>
+    
+    <!-- Time Tracking Script -->
+    <script>
+        // Time tracking functionality
+        let sessionStartTime = Date.now();
+        let trackingId = null;
+        let sessionInterval;
+        
+        // Generate unique tracking ID
+        function generateTrackingId() {
+            return 'track_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now();
+        }
+        
+        // Get or create tracking ID from URL
+        function initializeTracking() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const isSharedLink = urlParams.has('track');
+            trackingId = urlParams.get('track') || generateTrackingId();
+            
+            // Store tracking data in localStorage
+            const trackingKey = 'session_' + trackingId;
+            const existingData = localStorage.getItem(trackingKey);
+            
+            if (existingData) {
+                const data = JSON.parse(existingData);
+                sessionStartTime = data.startTime || Date.now();
+            } else {
+                // New session
+                sessionStartTime = Date.now();
+                localStorage.setItem(trackingKey, JSON.stringify({
+                    startTime: sessionStartTime,
+                    visits: 1,
+                    lastVisit: Date.now(),
+                    isOwner: !isSharedLink
+                }));
+            }
+            
+            // Show tracker only for original owner (not shared link visitors)
+            if (!isSharedLink) {
+                document.getElementById('time-tracker').style.display = 'block';
+                // Update URL if no tracking parameter
+                const newUrl = new URL(window.location);
+                newUrl.searchParams.set('track', trackingId);
+                window.history.replaceState({}, '', newUrl);
+            }
+            
+            return !isSharedLink; // Return true if this is the owner
+        }
+        
+        // Format time display
+        function formatTime(milliseconds) {
+            const seconds = Math.floor(milliseconds / 1000);
+            const hours = Math.floor(seconds / 3600);
+            const minutes = Math.floor((seconds % 3600) / 60);
+            const secs = seconds % 60;
+            
+            return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        }
+        
+        // Update session time display
+        function updateSessionTime() {
+            const currentTime = Date.now();
+            const sessionDuration = currentTime - sessionStartTime;
+            document.getElementById('session-time').textContent = formatTime(sessionDuration);
+            
+            // Save current session data
+            const trackingKey = 'session_' + trackingId;
+            const existingData = JSON.parse(localStorage.getItem(trackingKey) || '{}');
+            existingData.currentDuration = sessionDuration;
+            existingData.lastUpdate = currentTime;
+            localStorage.setItem(trackingKey, JSON.stringify(existingData));
+        }
+        
+        // Generate shareable tracking link
+        function generateShareLink() {
+            const newTrackingId = generateTrackingId();
+            const currentUrl = new URL(window.location);
+            currentUrl.searchParams.set('track', newTrackingId);
+            
+            // Copy to clipboard
+            navigator.clipboard.writeText(currentUrl.toString()).then(() => {
+                const shareBtn = document.getElementById('share-session');
+                const originalText = shareBtn.textContent;
+                shareBtn.textContent = 'Copied!';
+                shareBtn.style.background = '#00703c';
+                
+                setTimeout(() => {
+                    shareBtn.textContent = originalText;
+                    shareBtn.style.background = '#00703c';
+                }, 2000);
+            }).catch(() => {
+                // Fallback for browsers that don't support clipboard API
+                prompt('Copy this tracking link:', currentUrl.toString());
+            });
+        }
+        
+        // Track page visibility for accurate time tracking
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                // Page is hidden, pause tracking
+                if (sessionInterval) {
+                    clearInterval(sessionInterval);
+                }
+            } else {
+                // Page is visible, resume tracking
+                sessionInterval = setInterval(updateSessionTime, 1000);
+            }
+        });
+        
+        // Track page unload to save final data
+        window.addEventListener('beforeunload', function() {
+            const trackingKey = 'session_' + trackingId;
+            const existingData = JSON.parse(localStorage.getItem(trackingKey) || '{}');
+            existingData.sessionEnd = Date.now();
+            existingData.totalDuration = Date.now() - sessionStartTime;
+            localStorage.setItem(trackingKey, JSON.stringify(existingData));
+        });
+        
+        // Initialize tracking when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const isOwner = initializeTracking();
+            
+            // Start the timer
+            sessionInterval = setInterval(updateSessionTime, 1000);
+            
+            // Add click handler for share button only if owner
+            if (isOwner) {
+                document.getElementById('share-session').addEventListener('click', generateShareLink);
+            }
+            
+            // Initial time display update
+            updateSessionTime();
+            
+            console.log('Session tracking initialized with ID:', trackingId, isOwner ? '(Owner)' : '(Visitor)');
+        });
+        
+        // Analytics function to get session data
+        window.getSessionAnalytics = function() {
+            const allSessions = [];
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+                if (key.startsWith('session_')) {
+                    const data = JSON.parse(localStorage.getItem(key));
+                    allSessions.push({
+                        trackingId: key.replace('session_', ''),
+                        ...data
+                    });
+                }
+            }
+            return allSessions;
+        };
+        
+        // Tab switching functionality
+        function showTab(tabName) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Remove active class from all tab buttons
+            const tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach(button => {
+                button.classList.remove('active');
+            });
+            
+            // Show selected tab content
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+    </script>
 </body>
 </html>
