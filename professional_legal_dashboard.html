@@ -185,6 +185,70 @@
             display: block;
         }
 
+        /* Legal Violation Toggle Styles */
+        .violation-toggle {
+            border: 1px solid #b1b4b6;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        
+        .violation-header {
+            background: #f3f2f1;
+            padding: 15px;
+            cursor: pointer;
+            border-radius: 4px 4px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .violation-header:hover {
+            background: #e8e8e8;
+        }
+        
+        .violation-content {
+            display: none;
+            padding: 20px;
+            border-top: 1px solid #b1b4b6;
+        }
+        
+        .violation-content.active {
+            display: block;
+        }
+        
+        .legal-authority-section {
+            background: #e3f2fd;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #1d70b8;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .case-law-section {
+            background: #fff3e0;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #f57c00;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .application-section {
+            background: #f3e5f5;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #9c27b0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .toggle-arrow {
+            transition: transform 0.3s ease;
+            font-size: 18px;
+        }
+        
+        .toggle-arrow.rotated {
+            transform: rotate(90deg);
+        }
+
         /* Justice Minds Footer */
         .justice-minds-footer {
             width: 100%;
@@ -2377,12 +2441,7 @@
         </div>
     </div>
 
-    <!-- Time Tracking Display - Hidden for shared link visitors -->
-    <div id="time-tracker" style="position: fixed; top: 10px; right: 10px; background: rgba(29, 112, 184, 0.9); color: white; padding: 10px; border-radius: 5px; font-size: 14px; z-index: 1000; box-shadow: 0 2px 8px rgba(0,0,0,0.2); display: none;">
-        <div style="font-weight: bold;">Session Time</div>
-        <div id="session-time">00:00:00</div>
-        <button id="share-session" style="background: #00703c; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer; margin-top: 5px; font-size: 12px;">Share Link</button>
-    </div>
+    <!-- Analytics Tracking (Invisible) -->
 
     <script src="https://www.gov.uk/assets/govuk-frontend/govuk-frontend-5.4.1.min.js"></script>
     <script>window.GOVUKFrontend.initAll()</script>
@@ -2419,14 +2478,15 @@
                     startTime: sessionStartTime,
                     visits: 1,
                     lastVisit: Date.now(),
-                    isOwner: !isSharedLink
+                    isOwner: !isSharedLink,
+                    audioClicks: [],
+                    sectionViews: [],
+                    tabClicks: []
                 }));
             }
             
-            // Show tracker only for original owner (not shared link visitors)
+            // Update URL if no tracking parameter (invisible)
             if (!isSharedLink) {
-                document.getElementById('time-tracker').style.display = 'block';
-                // Update URL if no tracking parameter
                 const newUrl = new URL(window.location);
                 newUrl.searchParams.set('track', trackingId);
                 window.history.replaceState({}, '', newUrl);
@@ -2445,17 +2505,50 @@
             return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
         }
         
-        // Update session time display
+        // Update session time (invisible tracking)
         function updateSessionTime() {
             const currentTime = Date.now();
             const sessionDuration = currentTime - sessionStartTime;
-            document.getElementById('session-time').textContent = formatTime(sessionDuration);
             
-            // Save current session data
+            // Save current session data (invisible)
             const trackingKey = 'session_' + trackingId;
             const existingData = JSON.parse(localStorage.getItem(trackingKey) || '{}');
             existingData.currentDuration = sessionDuration;
             existingData.lastUpdate = currentTime;
+            localStorage.setItem(trackingKey, JSON.stringify(existingData));
+        }
+        
+        // Track audio clicks
+        function trackAudioClick(audioId, segmentNumber, speaker) {
+            const trackingKey = 'session_' + trackingId;
+            const existingData = JSON.parse(localStorage.getItem(trackingKey) || '{}');
+            
+            if (!existingData.audioClicks) existingData.audioClicks = [];
+            
+            existingData.audioClicks.push({
+                audioId: audioId,
+                segmentNumber: segmentNumber,
+                speaker: speaker,
+                timestamp: Date.now(),
+                sessionTime: Date.now() - sessionStartTime
+            });
+            
+            localStorage.setItem(trackingKey, JSON.stringify(existingData));
+        }
+        
+        // Track section/tab views
+        function trackSectionView(sectionName) {
+            const trackingKey = 'session_' + trackingId;
+            const existingData = JSON.parse(localStorage.getItem(trackingKey) || '{}');
+            
+            if (!existingData.sectionViews) existingData.sectionViews = [];
+            
+            existingData.sectionViews.push({
+                section: sectionName,
+                timestamp: Date.now(),
+                sessionTime: Date.now() - sessionStartTime
+            });
+            
             localStorage.setItem(trackingKey, JSON.stringify(existingData));
         }
         
@@ -2508,18 +2601,38 @@
         document.addEventListener('DOMContentLoaded', function() {
             const isOwner = initializeTracking();
             
-            // Start the timer
+            // Start the timer (invisible)
             sessionInterval = setInterval(updateSessionTime, 1000);
             
-            // Add click handler for share button only if owner
-            if (isOwner) {
-                document.getElementById('share-session').addEventListener('click', generateShareLink);
-            }
+            // Add audio click tracking to all audio elements
+            const audioElements = document.querySelectorAll('audio');
+            audioElements.forEach((audio, index) => {
+                audio.addEventListener('play', function() {
+                    const audioSrc = this.querySelector('source').src;
+                    const segmentMatch = audioSrc.match(/exact_(\d+)_/);
+                    const speakerMatch = audioSrc.match(/(DD_EXACT|BEN_EXACT)/);
+                    
+                    const segmentNumber = segmentMatch ? segmentMatch[1] : index + 1;
+                    const speaker = speakerMatch ? (speakerMatch[1] === 'DD_EXACT' ? 'DD JUDGE' : 'BEN MAK') : 'Unknown';
+                    
+                    trackAudioClick(audioSrc, segmentNumber, speaker);
+                });
+            });
             
-            // Initial time display update
+            // Track tab clicks
+            const tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const tabName = this.textContent.trim();
+                    trackSectionView(tabName);
+                });
+            });
+            
+            // Initial tracking update
             updateSessionTime();
+            trackSectionView('Page Load - Audio Evidence Dashboard');
             
-            console.log('Session tracking initialized with ID:', trackingId, isOwner ? '(Owner)' : '(Visitor)');
+            console.log('Analytics tracking initialized:', trackingId, isOwner ? '(Owner)' : '(Visitor)');
         });
         
         // Analytics function to get session data
@@ -2537,6 +2650,15 @@
             }
             return allSessions;
         };
+        
+        // Legal violation toggle functionality
+        function toggleViolation(violationId) {
+            const content = document.getElementById(violationId);
+            const arrow = content.previousElementSibling.querySelector('.toggle-arrow');
+            
+            content.classList.toggle('active');
+            arrow.classList.toggle('rotated');
+        }
         
         // Tab switching functionality
         function showTab(tabName) {
