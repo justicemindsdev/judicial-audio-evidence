@@ -1,4 +1,5 @@
 {
+  "name": "judicial-evidence-analysis",
   "public": true,
   "buildCommand": "echo 'No build required'",
   "outputDirectory": ".",
@@ -6,6 +7,10 @@
     {
       "source": "/",
       "destination": "/index.html"
+    },
+    {
+      "source": "/dashboard",
+      "destination": "/professional_legal_dashboard.html"
     }
   ],
   "headers": [

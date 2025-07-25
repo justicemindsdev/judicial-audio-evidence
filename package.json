@@ -2,7 +2,7 @@
   "name": "judicial-audio-evidence",
   "version": "1.0.0",
   "description": "Justice Minds - Judicial Audio Evidence Dashboard for Court of Appeal",
-  "main": "final_working_audio_dashboard.html",
+  "main": "professional_legal_dashboard.html",
   "scripts": {
     "dev": "vercel dev",
     "build": "echo 'Static HTML - no build required'",
@@ -38,7 +38,7 @@
     "rewrites": [
       {
         "source": "/",
-        "destination": "/final_working_audio_dashboard.html"
+        "destination": "/index.html"
       }
     ]
   }
