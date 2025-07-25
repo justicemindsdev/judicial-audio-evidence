@@ -174,38 +174,100 @@
 
         /* Professional Logo Strip */
         .logo-strip {
-            background: linear-gradient(90deg, #ffffff, #f8f9fa);
-            padding: 15px 0;
-            border-bottom: 2px solid #1d70b8;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(29, 112, 184, 0.2);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
 
         .logo-container {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-evenly;
             align-items: center;
             flex-wrap: wrap;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+            gap: 20px;
         }
 
         .logo-item {
-            height: 40px;
-            opacity: 0.8;
-            transition: all 0.3s ease;
-            margin: 5px;
+            height: 50px;
+            opacity: 0.9;
+            transition: all 0.4s ease;
+            filter: grayscale(20%);
         }
 
         .logo-item:hover {
             opacity: 1;
-            transform: scale(1.05);
+            transform: scale(1.1);
+            filter: grayscale(0%);
         }
 
         .logo-item img {
             height: 100%;
             width: auto;
             object-fit: contain;
+            border-radius: 8px;
+        }
+
+        /* Glassmorphic Buttons */
+        .enter-case-btn {
+            background: rgba(212, 53, 28, 0.2);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 20px 40px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 8px 32px rgba(212, 53, 28, 0.3);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .enter-case-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .enter-case-btn:hover::before {
+            left: 100%;
+        }
+
+        .enter-case-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(212, 53, 28, 0.4);
+            background: rgba(212, 53, 28, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .rarity-badge {
+            background: rgba(255, 176, 0, 0.2);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-family: 'Courier Prime', monospace;
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: 20px;
+            display: inline-block;
+            box-shadow: 0 8px 25px rgba(255, 176, 0, 0.3);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
         
         /* Professional spacing and typography */
@@ -438,37 +500,9 @@
         </div>
     </div>
 
-    <!-- Professional Logo Strip (Visible after hero) -->
-    <div class="logo-strip" style="position: absolute; top: 0; width: 100%; z-index: 1000;">
-        <div class="logo-container">
-            <div class="logo-item">
-                <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/logos/university_of_law.svg" alt="University of Law">
-            </div>
-            <div class="logo-item">
-                <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/logos/ual.svg" alt="University of the Arts London">
-            </div>
-            <div class="logo-item">
-                <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/logos/nspcc.svg" alt="NSPCC">
-            </div>
-            <div class="logo-item">
-                <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/logos/city_of_liverpool_college.svg" alt="City of Liverpool College">
-            </div>
-            <div class="logo-item">
-                <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/logos/liverpool_city_council.svg" alt="Liverpool City Council">
-            </div>
-            <div class="logo-item">
-                <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/logos/city_of_westminster.svg" alt="City of Westminster">
-            </div>
-            <div class="logo-item">
-                <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/logos/liverpool_echo.png" alt="Liverpool Echo">
-            </div>
-            <div class="logo-item">
-                <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/logos/scie.svg" alt="SCIE">
-            </div>
-            <div class="logo-item">
-                <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/logos/house_of_commons.svg" alt="House of Commons">
-            </div>
-        </div>
+    <!-- High-Resolution Logo Header Strip (Exact Original Format) -->
+    <div style="position: fixed; top: 0; width: 100%; z-index: 1000; padding: 0;">
+        <img src="/images/hero_header_final.png" alt="Justice Minds Professional Legal Credentials" style="width: 100%; height: auto; display: block;">
     </div>
 
     <!-- Main Content (Hidden Initially) -->
