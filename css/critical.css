@@ -1,0 +1,121 @@
+/* Critical CSS - Above-the-fold content */
+@page { size: A4; margin: 15mm; }
+
+/* Essential layout styles */
+body {
+    font-family: "nta", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    line-height: 1.6;
+}
+
+/* Justice Minds Header - Critical */
+.justice-minds-header {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.justice-minds-header img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Professional Header Bar - Above fold */
+.professional-header {
+    background: linear-gradient(90deg, #1d70b8, #003366);
+    color: white;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.professional-header h1 {
+    color: white;
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* Navigation - Critical */
+.nav-breadcrumb {
+    background: #f3f2f1;
+    padding: 15px 0;
+    border-bottom: 3px solid #1d70b8;
+    margin-bottom: 30px;
+}
+
+.back-button {
+    background: linear-gradient(45deg, #00703c, #00A551);
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Tab Navigation - Critical */
+.tab-navigation {
+    background: #f3f2f1;
+    border-bottom: 3px solid #1d70b8;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.tab-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tab-button {
+    background: #505a5f;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    flex: 1;
+    text-align: center;
+}
+
+.tab-button.active {
+    background: #1d70b8;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Mobile responsiveness - Critical */
+@media (max-width: 768px) {
+    .tab-container {
+        flex-direction: column;
+    }
+    
+    .professional-header h1 {
+        font-size: 20px;
+        padding: 0 15px;
+    }
+    
+    .back-button {
+        display: block;
+        text-align: center;
+        margin: 10px 15px;
+    }
+}

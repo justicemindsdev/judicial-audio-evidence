@@ -1,0 +1,1316 @@
+/* Component-specific CSS - Lazy loaded */
+
+/* Print styles */
+@media print { 
+    body { margin: 0; font-size: 10pt; color: #000; } 
+    .no-print { display: none; }
+    .page-break { page-break-before: always; }
+}
+
+/* Legal Violation Components */
+.violation-toggle {
+    border: 2px solid #b1b4b6;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.main-toggle {
+    border: 3px solid #d4351c;
+    box-shadow: 0 4px 8px rgba(212, 53, 28, 0.2);
+}
+
+.violation-header {
+    background: linear-gradient(135deg, #f3f2f1, #e8e8e8);
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 6px 6px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.main-toggle .violation-header {
+    background: linear-gradient(135deg, #d4351c, #b91c1c);
+    color: white;
+}
+
+.violation-header:hover {
+    background: linear-gradient(135deg, #e8e8e8, #d1d5db);
+}
+
+.main-toggle .violation-header:hover {
+    background: linear-gradient(135deg, #b91c1c, #991b1b);
+}
+
+.error-number {
+    color: #d4351c;
+    font-weight: bold;
+}
+
+.main-toggle .error-number {
+    color: #fef2f2;
+}
+
+.violation-content {
+    display: none;
+    padding: 30px;
+    border-top: 2px solid #b1b4b6;
+    background: #fafafa;
+}
+
+.violation-content.active {
+    display: block;
+}
+
+/* Content Sections with Enhanced Visual Depth */
+.summary-section, .timestamp-section, .judge-claim-section, 
+.ben-argument-section, .legal-accuracy-section, .legal-authority-section,
+.case-law-section, .application-section, .accuracy-assessment,
+.legal-questions-section, .requirements-grid {
+    margin: 30px 0;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.summary-section:hover, .timestamp-section:hover, .judge-claim-section:hover,
+.ben-argument-section:hover, .legal-accuracy-section:hover, .legal-authority-section:hover,
+.case-law-section:hover, .application-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.summary-section {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-left: 6px solid #0ea5e9;
+    border-top: 3px solid #0ea5e9;
+}
+
+.summary-section::before {
+    content: "📋 WHAT HAPPENED";
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    background: linear-gradient(45deg, #0ea5e9, #0284c7);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 3px 10px rgba(14, 165, 233, 0.3);
+}
+
+.timestamp-section {
+    background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%);
+    border-left: 6px solid #f59e0b;
+    border-top: 3px solid #f59e0b;
+}
+
+.timestamp-section::before {
+    content: "⏰ EXACT TIMESTAMPS";
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    background: linear-gradient(45deg, #f59e0b, #d97706);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 3px 10px rgba(245, 158, 11, 0.3);
+}
+
+.timestamp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.timestamp-item {
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.ben-timing {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.judge-timing {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.judge-claim-section {
+    background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%);
+    border-left: 6px solid #dc2626;
+    border-top: 3px solid #dc2626;
+}
+
+.judge-claim-section::before {
+    content: "⚖️ JUDGE'S CLAIM";
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    background: linear-gradient(45deg, #dc2626, #b91c1c);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 3px 10px rgba(220, 38, 38, 0.3);
+}
+
+.ben-argument-section {
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+    border-left: 6px solid #059669;
+    border-top: 3px solid #059669;
+}
+
+.ben-argument-section::before {
+    content: "💼 BEN'S ARGUMENT";
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    background: linear-gradient(45deg, #059669, #047857);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 3px 10px rgba(5, 150, 105, 0.3);
+}
+
+.claim-header, .argument-header {
+    background: rgba(0,0,0,0.05);
+    padding: 12px;
+    border-radius: 6px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.audio-player-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.play-button {
+    background: #1d70b8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.play-button:hover {
+    background: #003d7a;
+    transform: scale(1.05);
+}
+
+.transcription-section {
+    background: rgba(255,255,255,0.8);
+    padding: 15px;
+    border-radius: 6px;
+    border-left: 3px solid #6b7280;
+    margin: 10px 0;
+}
+
+.transcription-text {
+    font-style: italic;
+    color: #374151;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.legal-accuracy-section {
+    background: #f9fafb;
+    border: 2px solid #e5e7eb;
+}
+
+.accuracy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.accuracy-item {
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.ben-accuracy {
+    background: #d1fae5;
+    border: 2px solid #059669;
+}
+
+.judge-accuracy {
+    background: #fee2e2;
+    border: 2px solid #dc2626;
+}
+
+.accuracy-score {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.ben-accuracy .accuracy-score {
+    color: #065f46;
+}
+
+.judge-incorrect {
+    color: #991b1b;
+}
+
+.statute-citation, .case-citation {
+    background: rgba(255,255,255,0.9);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #1d70b8;
+}
+
+.citation-popup-btn {
+    background: #1d70b8;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.citation-popup-btn:hover {
+    background: #003d7a;
+}
+
+.requirements-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    background: transparent;
+    padding: 0;
+}
+
+.ben-requirements, .judge-requirements {
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.ben-requirements {
+    background: #ecfdf5;
+    border: 2px solid #059669;
+}
+
+.judge-requirements {
+    background: #fef2f2;
+    border: 2px solid #dc2626;
+}
+
+.requirement-list {
+    list-style: none;
+    padding: 0;
+}
+
+.requirement-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.ben-met li {
+    color: #065f46;
+}
+
+.judge-failed li {
+    color: #991b1b;
+}
+
+.load-error-btn {
+    background: #f59e0b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+}
+
+.load-error-btn:hover {
+    background: #d97706;
+}
+
+/* Citation Modal */
+.citation-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.citation-modal-content {
+    background: white;
+    max-width: 800px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.citation-modal-header {
+    background: linear-gradient(135deg, #1d70b8, #003d7a);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px 12px 0 0;
+}
+
+.citation-modal-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.close-citation {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.close-citation:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.citation-modal-body {
+    padding: 25px;
+}
+
+.citation-modal-body h3 {
+    color: #1d70b8;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.citation-modal-body ul {
+    margin: 10px 0;
+    padding-left: 25px;
+}
+
+.legal-highlight {
+    background: #f0f9ff;
+    border: 2px solid #0ea5e9;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.legal-highlight strong {
+    color: #0c4a6e;
+}
+
+.citation-link {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.citation-link a {
+    display: inline-block;
+    background: #1d70b8;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.citation-link a:hover {
+    background: #003d7a;
+}
+
+/* Final Verdict Section Styling */
+.final-verdict-section {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: white;
+    padding: 40px;
+    margin: 40px 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border: 3px solid #d4351c;
+}
+
+.verdict-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #d4351c;
+}
+
+.verdict-header h2 {
+    color: #ffffff;
+    font-size: 2.5em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 15px;
+}
+
+.verdict-subtitle {
+    background: linear-gradient(45deg, #d4351c, #b91c1c);
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Wednesbury Section */
+.wednesbury-section {
+    background: linear-gradient(135deg, #0f4c75, #1e3a8a);
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 12px;
+    border-left: 8px solid #3b82f6;
+}
+
+.wednesbury-section h3 {
+    color: #ffffff;
+    font-size: 2em;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.legal-principle {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border-left: 4px solid #60a5fa;
+}
+
+.legal-principle h4 {
+    color: #93c5fd;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.principle-text {
+    font-style: italic;
+    font-size: 1.1em;
+    color: #e5e7eb;
+    line-height: 1.6;
+}
+
+.wednesbury-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.wednesbury-finding {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #10b981;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.finding-icon {
+    font-size: 2em;
+    color: #10b981;
+}
+
+.finding-content strong {
+    color: #6ee7b7;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Beyond Reasonable Doubt Section */
+.beyond-doubt-section {
+    background: linear-gradient(135deg, #7c2d12, #dc2626);
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 12px;
+    border-left: 8px solid #ef4444;
+}
+
+.beyond-doubt-section h3 {
+    color: #ffffff;
+    font-size: 2em;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.evidence-strength {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.evidence-pillar {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid #fca5a5;
+    transition: transform 0.3s ease;
+}
+
+.evidence-pillar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.pillar-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.evidence-pillar h4 {
+    color: #fecaca;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.evidence-pillar p {
+    color: #f3f4f6;
+    line-height: 1.5;
+}
+
+.reasonable-doubt-conclusion {
+    margin-top: 30px;
+}
+
+.conclusion-box {
+    background: linear-gradient(45deg, #dc2626, #b91c1c);
+    padding: 25px;
+    border-radius: 10px;
+    border: 3px solid #fca5a5;
+    text-align: center;
+}
+
+.conclusion-box h4 {
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+/* Eggshell Skull Section */
+.eggshell-skull-section {
+    background: linear-gradient(135deg, #78350f, #f59e0b);
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 12px;
+    border-left: 8px solid #fbbf24;
+}
+
+.eggshell-skull-section h3 {
+    color: #ffffff;
+    font-size: 2em;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.vulnerability-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.vulnerability-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #fde68a;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.vuln-icon {
+    font-size: 2.5em;
+    color: #fde68a;
+}
+
+.vuln-content strong {
+    color: #fef3c7;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.liability-box {
+    background: linear-gradient(45deg, #f59e0b, #d97706);
+    padding: 25px;
+    border-radius: 10px;
+    border: 3px solid #fde68a;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.liability-box h4 {
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+/* Compensation Section */
+.compensation-section {
+    background: linear-gradient(135deg, #064e3b, #059669);
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 12px;
+    border-left: 8px solid #10b981;
+}
+
+.compensation-section h3 {
+    color: #ffffff;
+    font-size: 2em;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.compensation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin: 20px 0;
+}
+
+.compensation-category {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 10px;
+    border: 2px solid #6ee7b7;
+}
+
+.comp-header {
+    color: #6ee7b7;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #6ee7b7;
+    letter-spacing: 1px;
+}
+
+.comp-list {
+    list-style: none;
+    padding: 0;
+}
+
+.comp-list li {
+    color: #f3f4f6;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-weight: 500;
+}
+
+/* Enforcement Section */
+.enforcement-section {
+    background: linear-gradient(135deg, #581c87, #7c3aed);
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 12px;
+    border-left: 8px solid #a855f7;
+}
+
+.enforcement-section h3 {
+    color: #ffffff;
+    font-size: 2em;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.enforcement-mechanism h4,
+.professional-accountability h4 {
+    color: #c4b5fd;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 20px 0 15px 0;
+    letter-spacing: 1px;
+}
+
+.enforcement-grid,
+.accountability-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.enforcement-item,
+.accountability-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #c4b5fd;
+}
+
+.enforcement-item strong,
+.accountability-item strong {
+    color: #e9d5ff;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-size: 1.1em;
+}
+
+/* Final Determination */
+.final-determination {
+    background: linear-gradient(135deg, #1f2937, #111827);
+    padding: 40px;
+    margin: 40px 0;
+    border-radius: 15px;
+    border: 4px solid #fbbf24;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.determination-header h3 {
+    color: #fbbf24;
+    font-size: 2.5em;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    letter-spacing: 2px;
+}
+
+.determination-finding {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 10px;
+    border-left: 6px solid #fbbf24;
+}
+
+.determination-finding h4 {
+    color: #fde68a;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.determination-text {
+    color: #f9fafb;
+    font-size: 1.1em;
+    line-height: 1.7;
+    font-weight: 500;
+}
+
+.conclusion-seal {
+    background: linear-gradient(45deg, #d4351c, #b91c1c);
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    margin: 30px 0;
+    border: 3px solid #fbbf24;
+}
+
+.seal-content h4 {
+    color: #ffffff;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.seal-content p {
+    color: #fecaca;
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+.determination-date {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 15px;
+}
+
+.enforcement-warning {
+    background: linear-gradient(45deg, #7f1d1d, #dc2626);
+    padding: 25px;
+    border-radius: 10px;
+    border: 3px solid #fca5a5;
+    text-align: center;
+}
+
+.enforcement-warning h4 {
+    color: #ffffff;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.warning-text {
+    color: #fecaca;
+    font-size: 1.1em;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* Enhanced Audio Controls */
+.audio-player-section {
+    background: linear-gradient(135deg, #1e40af, #3b82f6);
+    padding: 20px;
+    border-radius: 12px;
+    border: 3px solid #60a5fa;
+    margin: 20px 0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.play-button {
+    background: linear-gradient(45deg, #dc2626, #b91c1c);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.play-button:hover {
+    background: linear-gradient(45deg, #b91c1c, #991b1b);
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.audio-controls audio {
+    border: 2px solid #60a5fa;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+/* Mobile Responsiveness for Final Verdict */
+@media (max-width: 768px) {
+    .final-verdict-section {
+        padding: 20px;
+        margin: 20px 0;
+    }
+    
+    .verdict-header h2 {
+        font-size: 1.8em;
+    }
+    
+    .wednesbury-grid,
+    .evidence-strength,
+    .vulnerability-grid,
+    .compensation-grid,
+    .enforcement-grid,
+    .accountability-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .audio-player-section {
+        padding: 15px;
+    }
+    
+    .play-button {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Content sections mobile optimization */
+    .summary-section, .timestamp-section, .judge-claim-section, 
+    .ben-argument-section, .legal-accuracy-section, .legal-authority-section,
+    .case-law-section, .application-section, .accuracy-assessment,
+    .legal-questions-section, .requirements-grid {
+        margin: 20px 0;
+        padding: 20px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    /* Header badges mobile scaling */
+    .summary-section::before, .timestamp-section::before, 
+    .judge-claim-section::before, .ben-argument-section::before {
+        font-size: 12px;
+        padding: 6px 15px;
+        top: -12px;
+        left: 15px;
+    }
+    
+    /* Grid layouts mobile */
+    .timestamp-grid, .accuracy-grid, .requirements-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    /* Audio player mobile */
+    .audio-player-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    /* Violation content mobile */
+    .violation-content {
+        padding: 15px;
+    }
+    
+    /* Toggle headers mobile */
+    .violation-header {
+        padding: 15px;
+        font-size: 16px;
+    }
+    
+    .violation-header h3 {
+        font-size: 18px;
+        line-height: 1.3;
+    }
+    
+    /* Text scaling for readability */
+    .transcription-text {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    .govuk-heading-s {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .govuk-body {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    /* Audio controls mobile optimization */
+    .play-button {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+    
+    /* Citation buttons mobile */
+    .citation-popup-btn {
+        width: 100%;
+        margin-top: 15px;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
+
+.legal-authority-section {
+    background: #e3f2fd;
+    padding: 15px;
+    margin: 15px 0;
+    border-left: 4px solid #1d70b8;
+    border-radius: 0 4px 4px 0;
+}
+
+.case-law-section {
+    background: #fff3e0;
+    padding: 15px;
+    margin: 15px 0;
+    border-left: 4px solid #f57c00;
+    border-radius: 0 4px 4px 0;
+}
+
+.application-section {
+    background: #f3e5f5;
+    padding: 15px;
+    margin: 15px 0;
+    border-left: 4px solid #9c27b0;
+    border-radius: 0 4px 4px 0;
+}
+
+.toggle-arrow {
+    transition: transform 0.3s ease;
+    font-size: 18px;
+}
+
+.toggle-arrow.rotated {
+    transform: rotate(90deg);
+}
+
+/* Card Components */
+.segment-card { 
+    background-color: #ffffff; 
+    border: 2px solid #b1b4b6; 
+    margin-bottom: 30px; 
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.segment-header { 
+    background-color: #1d70b8; 
+    color: white; 
+    padding: 15px; 
+    margin: -20px -20px 20px -20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.segment-content {
+    padding: 0;
+}
+
+/* Quote and Text Styles */
+.quote-text { 
+    font-style: italic; 
+    background-color: #f8f8f8; 
+    padding: 15px; 
+    border-left: 4px solid #1d70b8; 
+    margin: 15px 0;
+    border-radius: 0 4px 4px 0;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.speaker-label { 
+    font-weight: bold; 
+    color: #d4351c; 
+    display: block; 
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+/* Quote highlighting effect */
+.quote-text.playing {
+    background-color: #ffeb3b;
+    box-shadow: 0 0 10px rgba(255, 235, 59, 0.5);
+    transform: scale(1.02);
+}
+
+.expert-badge { 
+    display: inline-block; 
+    background-color: #1d70b8; 
+    color: white; 
+    padding: 5px 10px; 
+    border-radius: 3px; 
+    font-size: 12px; 
+    margin: 5px 5px 5px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Executive Summary */
+.executive-summary {
+    background-color: #1d70b8;
+    color: white;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.executive-summary h2 {
+    color: white;
+    margin-top: 0;
+}
+
+.key-findings {
+    background-color: #f3f2f1;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 4px;
+    border-left: 4px solid #00703c;
+}
+
+/* Assessment Framework */
+.assessment-framework {
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+    color: white;
+    padding: 25px;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.framework-score {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.framework-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.framework-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* Modal Components */
+.qualification-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 2% auto;
+    padding: 0;
+    border: none;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    position: relative;
+    max-height: 95vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #1d70b8, #003366);
+    color: white;
+    padding: 20px;
+    border-radius: 8px 8px 0 0;
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+}
+
+.close-modal {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close-modal:hover {
+    opacity: 0.7;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+/* Buttons and Interactive Elements */
+.qualification-toggle {
+    background: linear-gradient(45deg, #1d70b8, #003d7a);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    margin: 2px;
+}
+
+.qualification-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(29, 112, 184, 0.3);
+}
+
+.tab-button:hover {
+    background: #003366;
+}
+
+.back-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 112, 60, 0.3);
+    color: white;
+    text-decoration: none;
+}

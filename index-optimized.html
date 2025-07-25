@@ -118,9 +118,6 @@
             <button class="tab-button" onclick="showTab('government-assessment')" aria-selected="false" role="tab">
                 Government Assessment
             </button>
-            <button class="tab-button" onclick="showTab('analytics-dashboard')" aria-selected="false" role="tab">
-                📊 Analytics & Tracking
-            </button>
         </div>
     </div>
 
@@ -150,16 +147,11 @@
                         <p class="govuk-body"><strong>Visual Highlighting:</strong> When audio plays, the corresponding text will highlight in yellow to help you follow along.</p>
                     </div>
 
-                    <!-- Legal Violations Analysis - Main Content -->
+                    <!-- Audio Evidence Grid - Lazy loaded -->
                     <div id="audio-evidence-grid" class="segment-card" data-scroll-effect>
-                        <!-- Legal violations will be loaded here via JavaScript for performance -->
+                        <!-- Audio evidence will be loaded here via JavaScript for performance -->
                         <div class="loading-placeholder">
-                            <p>Loading 22 documented legal violations with audio evidence...</p>
-                            <div style="margin-top: 15px;">
-                                <div style="width: 100%; background-color: #f3f4f6; border-radius: 8px; height: 8px;">
-                                    <div style="width: 0%; background-color: #1d70b8; height: 8px; border-radius: 8px; transition: width 2s ease;" id="loading-progress"></div>
-                                </div>
-                            </div>
+                            <p>Loading audio evidence...</p>
                         </div>
                     </div>
                 </div>
@@ -177,13 +169,6 @@
         <div id="government-assessment" class="tab-content" role="tabpanel" aria-labelledby="government-assessment-tab">
             <div class="loading-placeholder">
                 <p>Loading government assessment...</p>
-            </div>
-        </div>
-
-        <!-- Analytics Dashboard Tab - Lazy loaded -->
-        <div id="analytics-dashboard" class="tab-content" role="tabpanel" aria-labelledby="analytics-dashboard-tab">
-            <div class="loading-placeholder">
-                <p>Loading analytics dashboard...</p>
             </div>
         </div>
     </main>
@@ -246,8 +231,7 @@
             'js/performance.js',
             'js/audio-manager.js',
             'js/ui-components.js',
-            'js/content-loader.js',
-            'js/link-tracking.js'
+            'js/content-loader.js'
         ];
 
         function loadScript(src) {
