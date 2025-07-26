@@ -64,69 +64,57 @@
     display: block;
 }
 
-/* Content Sections with Enhanced Visual Depth */
+/* Content Sections - Clean Professional Style */
 .summary-section, .timestamp-section, .judge-claim-section, 
 .ben-argument-section, .legal-accuracy-section, .legal-authority-section,
 .case-law-section, .application-section, .accuracy-assessment,
 .legal-questions-section, .requirements-grid {
-    margin: 30px 0;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    margin: 25px 0;
+    padding: 20px;
+    border-radius: 8px;
     position: relative;
-    transition: all 0.3s ease;
-}
-
-.summary-section:hover, .timestamp-section:hover, .judge-claim-section:hover,
-.ben-argument-section:hover, .legal-accuracy-section:hover, .legal-authority-section:hover,
-.case-law-section:hover, .application-section:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .summary-section {
-    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-    border-left: 6px solid #0ea5e9;
-    border-top: 3px solid #0ea5e9;
+    background: #f8f9fa;
+    border-left: 4px solid #1d70b8;
+    border-top: 2px solid #e9ecef;
 }
 
 .summary-section::before {
-    content: "📋 WHAT HAPPENED";
+    content: "WHAT HAPPENED";
     position: absolute;
-    top: -15px;
-    left: 20px;
-    background: linear-gradient(45deg, #0ea5e9, #0284c7);
+    top: -12px;
+    left: 15px;
+    background: #1d70b8;
     color: white;
-    padding: 8px 20px;
-    border-radius: 20px;
-    font-size: 14px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 12px;
     font-weight: bold;
-    letter-spacing: 1px;
     text-transform: uppercase;
-    box-shadow: 0 3px 10px rgba(14, 165, 233, 0.3);
+    letter-spacing: 0.5px;
 }
 
 .timestamp-section {
-    background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%);
-    border-left: 6px solid #f59e0b;
-    border-top: 3px solid #f59e0b;
+    background: #fefefe;
+    border-left: 4px solid #6c757d;
+    border-top: 2px solid #e9ecef;
 }
 
 .timestamp-section::before {
-    content: "⏰ EXACT TIMESTAMPS";
+    content: "EXACT TIMESTAMPS";
     position: absolute;
-    top: -15px;
-    left: 20px;
-    background: linear-gradient(45deg, #f59e0b, #d97706);
+    top: -12px;
+    left: 15px;
+    background: #6c757d;
     color: white;
-    padding: 8px 20px;
-    border-radius: 20px;
-    font-size: 14px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 12px;
     font-weight: bold;
-    letter-spacing: 1px;
     text-transform: uppercase;
-    box-shadow: 0 3px 10px rgba(245, 158, 11, 0.3);
+    letter-spacing: 0.5px;
 }
 
 .timestamp-grid {
@@ -154,47 +142,45 @@
 }
 
 .judge-claim-section {
-    background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%);
-    border-left: 6px solid #dc2626;
-    border-top: 3px solid #dc2626;
+    background: #fef2f2;
+    border-left: 4px solid #dc2626;
+    border-top: 2px solid #e9ecef;
 }
 
 .judge-claim-section::before {
-    content: "⚖️ JUDGE'S CLAIM";
+    content: "JUDGE'S CLAIM";
     position: absolute;
-    top: -15px;
-    left: 20px;
-    background: linear-gradient(45deg, #dc2626, #b91c1c);
+    top: -12px;
+    left: 15px;
+    background: #dc2626;
     color: white;
-    padding: 8px 20px;
-    border-radius: 20px;
-    font-size: 14px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 12px;
     font-weight: bold;
-    letter-spacing: 1px;
     text-transform: uppercase;
-    box-shadow: 0 3px 10px rgba(220, 38, 38, 0.3);
+    letter-spacing: 0.5px;
 }
 
 .ben-argument-section {
-    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
-    border-left: 6px solid #059669;
-    border-top: 3px solid #059669;
+    background: #f0f8f7;
+    border-left: 4px solid #00703c;
+    border-top: 2px solid #e9ecef;
 }
 
 .ben-argument-section::before {
-    content: "💼 BEN'S ARGUMENT";
+    content: "BEN'S ARGUMENT";
     position: absolute;
-    top: -15px;
-    left: 20px;
-    background: linear-gradient(45deg, #059669, #047857);
+    top: -12px;
+    left: 15px;
+    background: #00703c;
     color: white;
-    padding: 8px 20px;
-    border-radius: 20px;
-    font-size: 14px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 12px;
     font-weight: bold;
-    letter-spacing: 1px;
     text-transform: uppercase;
-    box-shadow: 0 3px 10px rgba(5, 150, 105, 0.3);
+    letter-spacing: 0.5px;
 }
 
 .claim-header, .argument-header {
@@ -997,7 +983,7 @@
     }
 }
 
-/* Enhanced Mobile Responsiveness */
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
     /* Content sections mobile optimization */
     .summary-section, .timestamp-section, .judge-claim-section, 
@@ -1005,7 +991,7 @@
     .case-law-section, .application-section, .accuracy-assessment,
     .legal-questions-section, .requirements-grid {
         margin: 20px 0;
-        padding: 20px;
+        padding: 15px;
         font-size: 14px;
         line-height: 1.5;
     }
@@ -1013,10 +999,10 @@
     /* Header badges mobile scaling */
     .summary-section::before, .timestamp-section::before, 
     .judge-claim-section::before, .ben-argument-section::before {
-        font-size: 12px;
-        padding: 6px 15px;
-        top: -12px;
-        left: 15px;
+        font-size: 11px;
+        padding: 3px 10px;
+        top: -10px;
+        left: 12px;
     }
     
     /* Grid layouts mobile */
@@ -1037,17 +1023,6 @@
         padding: 15px;
     }
     
-    /* Toggle headers mobile */
-    .violation-header {
-        padding: 15px;
-        font-size: 16px;
-    }
-    
-    .violation-header h3 {
-        font-size: 18px;
-        line-height: 1.3;
-    }
-    
     /* Text scaling for readability */
     .transcription-text {
         font-size: 14px;
@@ -1062,22 +1037,6 @@
     .govuk-body {
         font-size: 14px;
         line-height: 1.5;
-    }
-    
-    /* Audio controls mobile optimization */
-    .play-button {
-        width: 100%;
-        margin-bottom: 10px;
-        font-size: 14px;
-        padding: 12px 20px;
-    }
-    
-    /* Citation buttons mobile */
-    .citation-popup-btn {
-        width: 100%;
-        margin-top: 15px;
-        padding: 12px 20px;
-        font-size: 14px;
     }
 }
 
