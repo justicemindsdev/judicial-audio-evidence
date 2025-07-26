@@ -202,6 +202,37 @@ class ContentLoader {
                             </ul>
                         </div>
                     </div>
+
+                    <!-- ERROR 1 INCIDENT EVALUATION -->
+                    <div class="incident-evaluation-section">
+                        <h4 class="govuk-heading-s">INCIDENT EVALUATION - ERROR 1</h4>
+                        
+                        <div class="evaluation-grid">
+                            <div class="evaluation-item">
+                                <h5><strong>WEDNESBURY UNREASONABLENESS:</strong></h5>
+                                <p>✓ ESTABLISHED - Judge's dismissal of statutory advocacy rights is "so unreasonable that no sensible judicial officer could have arrived at it" under Care Act 2014 mandatory provisions.</p>
+                            </div>
+                            
+                            <div class="evaluation-item">
+                                <h5><strong>BEYOND REASONABLE DOUBT:</strong></h5>
+                                <p>✓ PROVEN - Primary audio evidence (11:43-11:47) with expert legal analysis demonstrates judicial error beyond reasonable doubt. No alternative interpretation possible.</p>
+                            </div>
+                            
+                            <div class="evaluation-item">
+                                <h5><strong>EGGSHELL SKULL PRINCIPLE:</strong></h5>
+                                <p>✓ APPLICABLE - Ben Mak's specific vulnerabilities (Master of Laws, family bonds, advocacy role) amplify damages. Court takes victim as found with all pre-existing circumstances.</p>
+                            </div>
+                            
+                            <div class="evaluation-item">
+                                <h5><strong>BUT FOR CAUSATION:</strong></h5>
+                                <p>✓ DIRECT CAUSE - But for this specific judicial dismissal of advocacy rights, Ben Mak would not have suffered statutory rights violation and resulting professional/personal damages.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="incident-conclusion">
+                            <strong>ERROR 1 DETERMINATION:</strong> All four legal principles established. This incident creates individual liability requiring compensation and accountability.
+                        </div>
+                    </div>
                 </div>
             </div>
         `;
@@ -249,8 +280,19 @@ class ContentLoader {
             `;
         }
 
-        // FINAL VERDICT SECTION - Wednesbury Principle & Legal Enforcement
+        // MAXIMUM CONCLUSIVE FINAL VERDICT - After All 22 Individual Incidents
         html += `
+            <div class="maximum-final-verdict-section" style="margin-top: 50px; border-top: 4px solid #dc2626; padding-top: 30px;">
+                <div class="max-verdict-header" style="text-align: center; margin-bottom: 40px;">
+                    <h2 style="color: #dc2626; font-size: 2.5em; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px;">
+                        ⚖️ MAXIMUM CONCLUSIVE FINAL VERDICT
+                    </h2>
+                    <div style="background: #dc2626; color: white; padding: 15px; border-radius: 8px; font-size: 1.2em; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">
+                        <strong>SYSTEMATIC JUDICIAL MISCONDUCT - 22 INDIVIDUAL INCIDENTS PROVEN</strong>
+                    </div>
+                </div>
+            </div>
+
             <div class="final-verdict-section">
                 <div class="verdict-header">
                     <h2 class="govuk-heading-xl">⚖️ FINAL LEGAL VERDICT & ENFORCEMENT</h2>

@@ -779,9 +779,40 @@ class UIComponents {
                 </div>
             </div>
 
-            <div style="text-align: center; margin-top: 20px; padding: 15px; background: linear-gradient(45deg, #f0f9ff, #dbeafe); border-radius: 8px; border: 2px solid #3b82f6;">
-                <strong>📊 ERROR ${errorId} LEGAL ANALYSIS COMPLETE WITH FINAL VERDICT</strong><br>
-                <em>This detailed analysis demonstrates judicial error ${errorId} of 22 systematic violations with comprehensive legal enforcement framework.</em>
+            <!-- ERROR ${errorId} INCIDENT EVALUATION -->
+            <div class="incident-evaluation-section">
+                <h4 class="govuk-heading-s">INCIDENT EVALUATION - ERROR ${errorId}</h4>
+                
+                <div class="evaluation-grid">
+                    <div class="evaluation-item">
+                        <h5><strong>WEDNESBURY UNREASONABLENESS:</strong></h5>
+                        <p>✓ ESTABLISHED - ${error.judgeError.toLowerCase()} regarding ${error.title.toLowerCase()} is so unreasonable that no sensible judicial officer could have arrived at it under ${error.statute}.</p>
+                    </div>
+                    
+                    <div class="evaluation-item">
+                        <h5><strong>BEYOND REASONABLE DOUBT:</strong></h5>
+                        <p>✓ PROVEN - Primary audio evidence (${error.judgeTime}) with expert legal analysis demonstrates this specific judicial error beyond reasonable doubt. No alternative interpretation possible.</p>
+                    </div>
+                    
+                    <div class="evaluation-item">
+                        <h5><strong>EGGSHELL SKULL PRINCIPLE:</strong></h5>
+                        <p>✓ APPLICABLE - Ben Mak's specific vulnerabilities (Master of Laws, family bonds, professional standing) amplify damages from this incident. Court takes victim as found.</p>
+                    </div>
+                    
+                    <div class="evaluation-item">
+                        <h5><strong>BUT FOR CAUSATION:</strong></h5>
+                        <p>✓ DIRECT CAUSE - But for this specific judicial ${error.judgeError.toLowerCase()}, Ben Mak would not have suffered the violations of ${error.statute} and resulting damages.</p>
+                    </div>
+                </div>
+                
+                <div class="incident-conclusion">
+                    <strong>ERROR ${errorId} DETERMINATION:</strong> All four legal principles established for this individual incident. Creates specific liability requiring compensation and accountability.
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 20px; padding: 15px; background: #f8f9fa; border-radius: 8px; border: 2px solid #6c757d;">
+                <strong>📊 ERROR ${errorId} - INDIVIDUAL INCIDENT ANALYSIS COMPLETE</strong><br>
+                <em>This incident evaluation demonstrates one of 22 systematic judicial violations requiring individual accountability.</em>
             </div>
         `;
     }
