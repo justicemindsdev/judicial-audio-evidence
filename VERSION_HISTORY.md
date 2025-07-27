@@ -7,9 +7,9 @@ This document lists the working versions of the site that **DO NOT** have the mo
 These versions can be accessed directly without getting stuck on an intro animation:
 
 ### Latest Working Version
-- **Commit**: `3807e01` - Fix Vercel URL in version history documentation
-- **Live URL**: https://judicial-audio-evidence-pagkr8iga-justiceminds-projects.vercel.app
-- **Features**: Full lazy loading, print optimization, simple header
+- **Commit**: `40b3e30` - Force cache-busting deployment: Ensure no mobile animation loads
+- **Live URL**: https://judicial-audio-evidence-oi2v2es7f-justiceminds-projects.vercel.app
+- **Features**: Full lazy loading, print optimization, simple header, NO ANIMATION
 
 ### Historical Working Version  
 - **Commit**: `76ce512` - Add individual incident evaluations to each error plus maximum final verdict
