@@ -8,7 +8,7 @@ These versions can be accessed directly without getting stuck on an intro animat
 
 ### Latest Working Version
 - **Commit**: `cdc4275` - Force deployment: Remove mobile animation, ensure simple header display
-- **Live URL**: https://benmak-court-evidence-flspa1pgi-justiceminds-projects.vercel.app/
+- **Live URL**: https://judicial-audio-evidence-ibstini2s-justiceminds-projects.vercel.app
 - **Features**: Full lazy loading, print optimization, simple header
 
 ### Historical Working Version  
