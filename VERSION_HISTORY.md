@@ -8,8 +8,8 @@ These versions can be accessed directly without getting stuck on an intro animat
 
 ### Latest Working Version
 - **Commit**: `40b3e30` - Force cache-busting deployment: Ensure no mobile animation loads
-- **Live URL**: https://judicial-audio-evidence-oi2v2es7f-justiceminds-projects.vercel.app
-- **Features**: Full lazy loading, print optimization, simple header, NO ANIMATION
+- **Live URL**: https://judicial-audio-evidence-ocx3j74q7-justiceminds-projects.vercel.app
+- **Features**: Full lazy loading, print optimization, simple header, NO ANIMATION, PUBLIC ACCESS
 
 ### Historical Working Version  
 - **Commit**: `76ce512` - Add individual incident evaluations to each error plus maximum final verdict
