@@ -5,7 +5,7 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/professional_legal_dashboard.html"
+      "destination": "/minimal_dashboard.html"
     },
     {
       "source": "/dashboard",

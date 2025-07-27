@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Audio Evidence Analysis - Liverpool Family Court | Justice Minds</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        .header { width: 100%; text-align: center; background: #f8f9fa; }
+        .header img { width: 100%; max-width: 1200px; height: auto; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .main-title { text-align: center; margin: 30px 0; font-size: 2em; }
+        .summary { background: #f0f8ff; padding: 20px; margin: 20px 0; border-radius: 8px; }
+        .evidence-list { margin: 30px 0; }
+        .evidence-item { 
+            border: 2px solid #ddd; 
+            margin: 15px 0; 
+            border-radius: 8px;
+            background: white;
+        }
+        .evidence-header { 
+            background: #f5f5f5; 
+            padding: 15px; 
+            cursor: pointer;
+            border-bottom: 1px solid #ddd;
+        }
+        .evidence-content { 
+            padding: 20px; 
+            display: none;
+        }
+        .evidence-content.active { display: block; }
+        .error-title { font-size: 1.2em; font-weight: bold; color: #d63384; }
+        .toggle-arrow { float: right; font-size: 1.2em; }
+        .audio-section { margin: 15px 0; padding: 15px; background: #f8f9fa; border-radius: 6px; }
+        .transcript { font-style: italic; color: #555; margin: 10px 0; }
+        .print-btn { 
+            position: fixed; 
+            top: 20px; 
+            right: 20px; 
+            padding: 10px 20px; 
+            background: #007bff; 
+            color: white; 
+            border: none; 
+            border-radius: 6px; 
+            cursor: pointer; 
+        }
+    </style>
+</head>
+<body>
+    <!-- Simple Header - NO ANIMATION -->
+    <div class="header">
+        <img src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/branding/justice_minds_header.png" 
+             alt="Justice Minds Forensic Intelligence" 
+             loading="eager">
+    </div>
+
+    <!-- Print Button -->
+    <button class="print-btn" onclick="window.print()">🖨️ Print</button>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1 class="main-title">Ben Mak vs Liverpool Family Court - Complete Audio Evidence Analysis</h1>
+        
+        <!-- Executive Summary -->
+        <div class="summary">
+            <h2>Executive Summary</h2>
+            <p><strong>This comprehensive analysis documents 22 distinct judicial procedural errors</strong> occurring during Liverpool Family Court proceedings, as determined through expert forensic audio analysis by Ben Mak (Master of Laws, 93.9% JAC Framework Assessment).</p>
+        </div>
+
+        <!-- Evidence List -->
+        <div class="evidence-list">
+            <h2>Legal Audio Evidence Analysis - 22 Documented Errors</h2>
+            
+            <!-- ERROR 1 -->
+            <div class="evidence-item">
+                <div class="evidence-header" onclick="toggleEvidence(1)">
+                    <div class="error-title">ERROR 1: DENIAL OF STATUTORY ADVOCACY RIGHTS</div>
+                    <span class="toggle-arrow" id="arrow-1">▶</span>
+                </div>
+                <div class="evidence-content" id="content-1">
+                    <h3>What Happened</h3>
+                    <p>Judge dismissed Ben Mak's statutory advocacy rights under Care Act 2014, incorrectly claiming legal counsel was sufficient substitute for mandatory advocacy support.</p>
+                    
+                    <div class="audio-section">
+                        <h4>Judge's Statement (Audio Evidence)</h4>
+                        <audio controls>
+                            <source src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/exact_01_Advocacy_Rights_Exact_DD_EXACT.mp3" type="audio/mpeg">
+                        </audio>
+                        <div class="transcript">"But you know that your sister has an advocate. She has very experienced counsel."</div>
+                    </div>
+                    
+                    <div class="audio-section">
+                        <h4>Ben's Legal Argument (Audio Evidence)</h4>
+                        <audio controls>
+                            <source src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/exact_01_Advocacy_Rights_Exact_BEN_EXACT.mp3" type="audio/mpeg">
+                        </audio>
+                        <div class="transcript">"She has the right to advocacy support under Care Act 2014, section 67-68. This is mandatory, not discretionary."</div>
+                    </div>
+                    
+                    <h3>Legal Analysis</h3>
+                    <p><strong>Ben Mak: CORRECT</strong> - Properly cited Care Act 2014 sections 67-68 mandatory advocacy duty</p>
+                    <p><strong>Judge: INCORRECT</strong> - Misapplied law, unlawfully substituted counsel for statutory advocacy</p>
+                    
+                    <h3>Final Verdict</h3>
+                    <p><strong>JUDICIAL ERROR CONFIRMED:</strong> Systematic violation of Care Act 2014 statutory framework</p>
+                </div>
+            </div>
+
+            <!-- ERROR 2-22 Placeholders -->
+            <div class="evidence-item">
+                <div class="evidence-header" onclick="toggleEvidence(2)">
+                    <div class="error-title">ERROR 2: MCKENZIE FRIEND RIGHTS DISMISSED</div>
+                    <span class="toggle-arrow" id="arrow-2">▶</span>
+                </div>
+                <div class="evidence-content" id="content-2">
+                    <p>Analysis of Error 2 would load here...</p>
+                </div>
+            </div>
+
+            <!-- Continue for all 22 errors... -->
+            <div class="evidence-item">
+                <div class="evidence-header">
+                    <div class="error-title">ERRORS 3-22: Additional Violations</div>
+                </div>
+                <div class="evidence-content" style="display: block;">
+                    <p>This simplified version shows the structure. The full analysis includes all 22 documented judicial errors with complete audio evidence, legal citations, and expert determination.</p>
+                    <p><strong>Key Point:</strong> This version has <strong>ZERO ANIMATION CODE</strong> - no opacity changes, no transforms, no delays.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Simple JavaScript - NO ANIMATIONS -->
+    <script>
+        function toggleEvidence(id) {
+            const content = document.getElementById('content-' + id);
+            const arrow = document.getElementById('arrow-' + id);
+            
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+                arrow.textContent = '▶';
+            } else {
+                content.style.display = 'block';  
+                arrow.textContent = '▼';
+            }
+        }
+    </script>
+</body>
+</html>
