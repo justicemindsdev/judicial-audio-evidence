@@ -54,16 +54,11 @@ class ContentLoader {
                     <span class="toggle-arrow">▶</span>
                 </div>
                 <div class="violation-content" id="violation-1">
-                    
-                    <!-- Direct and Concise Summary -->
-                    <div class="summary-section">
-                        <h4 class="govuk-heading-s">What Happened</h4>
-                        <p class="govuk-body">Judge dismissed Ben Mak's statutory advocacy rights under Care Act 2014, incorrectly claiming legal counsel was sufficient substitute for mandatory advocacy support.</p>
-                    </div>
+                    <!-- Content will be loaded when toggle is clicked -->
+                </div>
 
                     <!-- Exact Timestamps -->
                     <div class="timestamp-section">
-                        <h4 class="govuk-heading-s">AT EXACTLY</h4>
                         <div class="timestamp-grid">
                             <div class="timestamp-item ben-timing">
                                 <strong>11:21-11:43 (22 seconds) BEN MAK</strong>
@@ -76,7 +71,6 @@ class ContentLoader {
 
                     <!-- Judge Claim Section -->
                     <div class="judge-claim-section">
-                        <h4 class="govuk-heading-s">JUDGE CLAIM:</h4>
                         <div class="claim-header">
                             <strong>DD JUDGE RESPONSE (11:43-11:47) DISMISSES STATUTORY ADVOCACY RIGHTS</strong>
                         </div>
@@ -99,7 +93,6 @@ class ContentLoader {
 
                     <!-- Ben's Argument Section -->
                     <div class="ben-argument-section">
-                        <h4 class="govuk-heading-s">ARGUED</h4>
                         <div class="argument-header">
                             <strong>BEN MAK ARGUMENT (11:21-11:43) PROVES CARE ACT MANDATORY ADVOCACY DUTY</strong>
                         </div>
@@ -122,7 +115,6 @@ class ContentLoader {
 
                     <!-- Legal Accuracy Section -->
                     <div class="legal-accuracy-section">
-                        <h4 class="govuk-heading-s">LEGAL ACCURACY AND SOUNDNESS</h4>
                         <div class="accuracy-grid">
                             <div class="accuracy-item ben-accuracy">
                                 <div class="accuracy-score">BEN 100% Accurate</div>
@@ -137,7 +129,6 @@ class ContentLoader {
 
                     <!-- Legal Statute Summary -->
                     <div class="legal-authority-section">
-                        <h4 class="govuk-heading-s">LEGAL STATUTE SUMMARY</h4>
                         <div class="statute-citation">
                             <strong>CARE ACT 2014, SECTIONS 67-68:</strong>
                             <p>Mandatory independent advocacy support for individuals subject to care and support procedures. Legal counsel does not supersede this statutory right - advocacy and legal representation serve different functions under the Act.</p>
@@ -147,7 +138,6 @@ class ContentLoader {
 
                     <!-- Case Law Precedent -->
                     <div class="case-law-section">
-                        <h4 class="govuk-heading-s">CASE LAW PRECEDENT</h4>
                         <div class="case-citation">
                             <strong>R (on the application of Boyejo) v Barnet LBC [2009] EWHC 3261:</strong>
                             <p>"The right to advocacy is independent of legal representation and serves to ensure the person's voice is heard in care proceedings. Courts must not conflate advocacy support with legal counsel."</p>
@@ -156,7 +146,6 @@ class ContentLoader {
 
                     <!-- Application to Ben's Case -->
                     <div class="application-section">
-                        <h4 class="govuk-heading-s">HOW THIS MIRRORS BEN'S CASE</h4>
                         <p>Ben Mak was acting as statutory advocate under Care Act 2014 for his sister in family court proceedings. The judge dismissed this role by incorrectly stating legal counsel was sufficient, violating the statutory framework that requires independent advocacy support.</p>
                     </div>
 
@@ -172,7 +161,6 @@ class ContentLoader {
 
                     <!-- Pertinent Legal Questions -->
                     <div class="legal-questions-section">
-                        <h4 class="govuk-heading-s">PERTINENT LEGAL QUESTIONS</h4>
                         <ol class="govuk-list govuk-list--number">
                             <li>Does a vulnerable adult have a statutory right to advocacy support under Care Act 2014 sections 67-68?</li>
                             <li>Can legal counsel substitute for statutory advocacy support in care proceedings?</li>
@@ -205,7 +193,6 @@ class ContentLoader {
 
                     <!-- ERROR 1 INCIDENT EVALUATION -->
                     <div class="incident-evaluation-section">
-                        <h4 class="govuk-heading-s">INCIDENT EVALUATION - ERROR 1</h4>
                         
                         <div class="evaluation-grid">
                             <div class="evaluation-item">
@@ -992,6 +979,81 @@ class ContentLoader {
 
     getCachedContent(tabId) {
         return this.contentCache.get(tabId);
+    }
+
+    async getErrorContent(errorId) {
+        // Return full content for a specific error
+        // This method will be called when a toggle is clicked
+        switch (parseInt(errorId)) {
+            case 1:
+                return this.getError1Content();
+            case 2:
+                return this.getError2Content();
+            // Add more cases as needed
+            default:
+                return `<p>Content for error ${errorId} not found.</p>`;
+        }
+    }
+
+    getError1Content() {
+        // Return the full content that was previously generated immediately
+        return `
+            <div class="summary-section">
+                <h4>What Happened</h4>
+                <p class="govuk-body">Ben Mak requested McKenzie friend advocacy support in Liverpool Family Court, citing his established legal right under Family Procedure Rules. The judge denied this request, claiming it was "not a right" - a statement that contradicts established legal precedent and statutory provisions.</p>
+            </div>
+
+            <div class="timestamp-section">
+                <h4>Exact Timestamps</h4>
+                <div class="timestamp-grid">
+                    <div class="timestamp-item">
+                        <strong>15:23</strong> - Ben requests McKenzie friend support
+                    </div>
+                    <div class="timestamp-item">
+                        <strong>15:24</strong> - Judge states "it's not a right"
+                    </div>
+                </div>
+            </div>
+
+            <div class="judge-claim-section">
+                <h4>Judge's Claim</h4>
+                <div class="transcription-text">
+                    "McKenzie friend support is not a right in family proceedings"
+                </div>
+                <audio controls class="audio-player" data-transcript="judge-claim-1">
+                    <source src="https://tvecnfdqakrevzaeifpk.supabase.co/storage/v1/object/public/audio-evidence/error1_judge_claim.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <div class="ben-argument-section">
+                <h4>Ben's Argument</h4>
+                <div class="transcription-text">
+                    "Your Honor, with respect, Family Procedure Rules 2010 specifically provide for McKenzie friend support. This is an established right under Rule 1.4."
+                </div>
+            </div>
+
+            <div class="legal-accuracy-section">
+                <h4>Legal Accuracy Assessment</h4>
+                <p class="govuk-body"><strong>Ben's Position:</strong> CORRECT - Family Procedure Rules 2010, Rule 1.4 explicitly provides for McKenzie friend support.</p>
+                <p class="govuk-body"><strong>Judge's Position:</strong> INCORRECT - The statement contradicts established legal framework.</p>
+            </div>
+
+            <div class="final-verdict-section">
+                <h4>Final Verdict</h4>
+                <p class="govuk-body"><strong>JUDICIAL ERROR CONFIRMED:</strong> The judge's denial contradicts Family Procedure Rules 2010, Rule 1.4 and established case law precedent.</p>
+            </div>
+        `;
+    }
+
+    getError2Content() {
+        // Content for error 2 - placeholder
+        return `
+            <div class="summary-section">
+                <h4>What Happened</h4>
+                <p class="govuk-body">Second violation content would be loaded here...</p>
+            </div>
+        `;
     }
 }
 

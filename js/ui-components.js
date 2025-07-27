@@ -18,6 +18,7 @@ class UIComponents {
         this.setupModals();
         this.setupViolationToggles();
         this.setupKeyboardNavigation();
+        this.setupPrintOptimization();
     }
 
     setupTabs() {
@@ -120,8 +121,8 @@ class UIComponents {
     }
 
     setupViolationToggles() {
-        // Global function for toggling violations
-        window.toggleViolation = (errorId) => {
+        // Global function for toggling violations with lazy loading
+        window.toggleViolation = async (errorId) => {
             const content = document.getElementById(`violation-${errorId}`);
             const header = content.previousElementSibling;
             const arrow = header.querySelector('.toggle-arrow');
@@ -140,17 +141,17 @@ class UIComponents {
                     }
                 });
                 
+                // If not active, load content first if not already loaded
+                if (!isActive) {
+                    await this.loadViolationContent(errorId, content);
+                }
+                
                 // Toggle current violation
                 content.classList.toggle('active');
                 
                 // Update arrow
                 if (arrow) {
                     arrow.textContent = isActive ? '▶' : '▼';
-                }
-                
-                // Load content if needed
-                if (!isActive && errorId > 1) {
-                    this.loadErrorDetails(errorId);
                 }
                 
                 // Scroll to violation if opening
@@ -878,6 +879,108 @@ class UIComponents {
 
     refreshComponents() {
         this.setupComponents();
+    }
+
+    async loadViolationContent(errorId, contentElement) {
+        // Check if content is already loaded
+        if (contentElement.hasAttribute('data-loaded')) {
+            return;
+        }
+
+        // Show loading state
+        contentElement.innerHTML = '<div class="loading-content"><p>Loading violation details...</p></div>';
+        
+        try {
+            // Load content based on errorId
+            const violationContent = await this.getViolationContent(errorId);
+            contentElement.innerHTML = violationContent;
+            contentElement.setAttribute('data-loaded', 'true');
+            
+            // Initialize any audio players in the newly loaded content
+            if (window.audioManager) {
+                window.audioManager.observeAudioElements();
+            }
+        } catch (error) {
+            console.error(`Failed to load violation ${errorId}:`, error);
+            contentElement.innerHTML = '<div class="error-content"><p>Failed to load content. Please try again.</p></div>';
+        }
+    }
+
+    async getViolationContent(errorId) {
+        // Get content from the content loader
+        if (window.contentLoader) {
+            return await window.contentLoader.getErrorContent(errorId);
+        }
+        return '<p>Content not available</p>';
+    }
+
+    setupPrintOptimization() {
+        // Add print event listeners
+        window.addEventListener('beforeprint', () => {
+            this.prepareForPrint();
+        });
+
+        window.addEventListener('afterprint', () => {
+            this.restoreAfterPrint();
+        });
+    }
+
+    async prepareForPrint() {
+        // Store current toggle states
+        this.printStates = new Map();
+        
+        // Load all content and expand all toggles for printing
+        const violations = document.querySelectorAll('.violation-toggle');
+        
+        for (const violation of violations) {
+            const errorId = violation.getAttribute('data-error');
+            const content = document.getElementById(`violation-${errorId}`);
+            const isActive = content.classList.contains('active');
+            
+            // Store current state
+            this.printStates.set(errorId, isActive);
+            
+            // Load content if not loaded
+            if (!content.hasAttribute('data-loaded')) {
+                await this.loadViolationContent(errorId, content);
+            }
+            
+            // Expand all toggles
+            content.classList.add('active', 'print-expanded');
+            
+            // Update arrow for print
+            const arrow = violation.querySelector('.toggle-arrow');
+            if (arrow) {
+                arrow.textContent = '▼';
+            }
+        }
+        
+        // Add print class to body
+        document.body.classList.add('printing');
+    }
+
+    restoreAfterPrint() {
+        // Restore original toggle states
+        if (this.printStates) {
+            this.printStates.forEach((wasActive, errorId) => {
+                const content = document.getElementById(`violation-${errorId}`);
+                const violation = document.querySelector(`[data-error="${errorId}"]`);
+                
+                if (!wasActive) {
+                    content.classList.remove('active');
+                }
+                content.classList.remove('print-expanded');
+                
+                // Restore arrow
+                const arrow = violation.querySelector('.toggle-arrow');
+                if (arrow) {
+                    arrow.textContent = wasActive ? '▼' : '▶';
+                }
+            });
+        }
+        
+        // Remove print class
+        document.body.classList.remove('printing');
     }
 }
 
