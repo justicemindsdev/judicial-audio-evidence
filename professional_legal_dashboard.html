@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,6 +77,9 @@
     <link rel="preload" href="css/audio.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="https://www.gov.uk/assets/govuk-frontend/govuk-frontend-5.4.1.min.css" as="style">
     
+    <!-- Print CSS -->
+    <link rel="stylesheet" href="css/print.css" media="print">
+    
     <!-- Non-critical CSS with fallback -->
     <noscript>
         <link rel="stylesheet" href="css/components.css">
@@ -97,6 +101,11 @@
         <div class="govuk-width-container">
             <h1>Ben Mak vs Liverpool Family Court - Complete Audio Evidence Analysis</h1>
         </div>
+    </div>
+
+    <!-- Print Controls -->
+    <div class="print-controls">
+        <button class="print-btn" onclick="window.print()">🖨️ Print Legal Document</button>
     </div>
 
     <!-- Navigation -->
@@ -204,6 +213,7 @@
 
     <!-- Critical JavaScript - Inline for performance -->
     <script>
+
         // Minimal critical JavaScript for immediate functionality
         window.showTab = function(tabId) {
             // Basic tab switching - enhanced version loaded later
